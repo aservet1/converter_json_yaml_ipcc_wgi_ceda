@@ -1,0 +1,72 @@
+Archival Not Required								field_ds_archival_not_required
+Archival status										field_ds_archival_status
+Archival Sub Status									field_ds_sub_status
+Catalogue record updated by							field_ds_catalogue_updated_by
+CEDA Assigned Person								field_ds_ceda_assigned_person
+CEDA check done by									field_ds_ceda_check_done_by
+CEDA Dataset issue flagged by						field_ds_ceda_issue_by
+CEDA DOI											field_ds_ceda_doi
+CEDA GitHub catalogue URL							field_ds_github_catalogue_url
+CEDA GitHub data URL								field_ds_github_data_url
+CEDA record created by								field_ds_ceda_record_created_by
+CEDA Short DOI										field_ds_ceda_doi_short
+CEDA UUID											field_ds_ceda_uuid
+Chapter												field_ds_chapter
+Code Archival										field_ds_code_archival	
+Code Archival Notes									field_ds_code_notes	
+Code Archival Status								field_ds_code_archival_status
+Code on GitHub										field_ds_code_on_github		
+Contributors										field_ds_authors	
+Current State (Admin field do not use)				field_ds_current_state_admin	
+Data on DMS											field_ds_data_on_dms	
+Data provided in relation to figure					field_ds_description
+Dataset issue flagged by							field_ds_issue_by
+DMS Code Folder										field_ds_code_dms_location
+DMS Data folder										field_ds_dms_data_folder
+Document Type										field_ds_type
+FGD Figure Number									field_ds_ar6_figure
+FGD table number or section (for computations)		field_ds_number
+Figure subpanels									field_ds_subpanel_information
+Finalised by										field_ds_finalised_by
+GitHub URL											field_ds_github_url
+Global Spatial coverage								field_ds_sc_global
+Highest Vertical Extent								field_ds_ve_highest
+Horizontal resolution								field_ds_hr
+Input datasets										field_ds_input_datasets
+Link for detailed info								field_ds_detailed_infolink
+Links to IPCC website								field_ds_ipcc_link
+List of data provided								field_ds_data_list
+Lowest Vertical Extent								field_ds_ve_lowest
+Metadata completed by								field_ds_metadata_completed_by
+Note on Current status								field_ds_issue
+One sentence figure description						field_ds_1_sentence_description	Text
+Order												field_ds_orders
+Other horizontal unit								field_ds_hr_unit_other
+Other relevant online documentation					field_ds_other_documents
+Other vertical unit									field_ds_ve_unit_other
+Preview checked by									field_ds_preview_checked_by
+Preview Issue flagged by							field_ds_preview_issue_by
+Preview sent to authors by							field_ds_preview_sent_by
+Published by										field_ds_published_by
+Resource Type										field_ds_resource_type
+Source of Input Dataset Information					field_ds_input_dataset_excel
+Sources of additional information					field_ds_detailed_info
+Spatial coverage - East								field_ds_sc_east
+Spatial coverage - North							field_ds_sc_north
+Spatial coverage - South							field_ds_sc_south
+Spatial coverage - West								field_ds_sc_west
+Temporal range: End date							field_ds_tr_end_date
+Temporal range: Start date							field_ds_tr_start_date
+TSU Assigned Person									field_ds_tsu_assigned_person
+TSU check done by									field_ds_tsu_check_done_by
+TSU Code Issue										field_ds_tsu_code_issue
+TSU GitHub Figure URL								field_ds_figure_code
+TSU To Check										field_ds_author_updated
+Unit of Horizontal Resolution						field_ds_hr_unit
+Unit of Vertical Extent								field_ds_ve_unit
+Upload to CEDA done by								field_ds_upload_to_ceda_done_by	Text
+===================================================	==================================================
+
+
+
+	

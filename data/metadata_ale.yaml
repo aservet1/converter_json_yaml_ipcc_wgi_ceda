@@ -1,0 +1,117 @@
+{
+  "title": "Chapter [INSERT CHAPTER NUMBER] of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure [INSERT FIGURE NUMBER]",
+  "description": "Data for Figure [INSERT FIGURE NUMBER] from Chapter [INSERT CHAPTER NUMBER] of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
+  
+  [INSERT One sentence figure description]\n\n
+  
+  ---------------------------------------------------\n
+  How to cite this dataset\n
+  ---------------------------------------------------\n
+  When citing this dataset, please include both the data citation below (under 'Citable as') and the following citation for the report component from which the figure originates:\n
+  [Insert Citation for Chapter]\n\n
+  
+  ---------------------------------------------------\n
+  Sources of additional information\n
+  ---------------------------------------------------\n 
+  The following weblinks are provided in the Related Documents section of this catalogue record:
+  - Link to the report component containing the figure (Chapter [INSERT CHAPTER NUMBER]) 
+  - Link to the Supplementary Material for Chapter [[INSERT CHAPTER NUMBER]], which contains [supporting information on the figure in Section [INSERT SECION NUMBER]) and ]details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]] 
+  - [Link to the code for the figure, archived on Zenodo]
+  - [Link to input data used in the figure, archived at DKRZ]\n\n
+  
+  ---------------------------------------------------\n
+  Figure subpanels\n
+  ---------------------------------------------------\n
+  [Insert Figure subpanels text]\n\n
+
+  ---------------------------------------------------\n
+  List of data provided\n
+  ---------------------------------------------------\n
+  [Insert List of data provided text]\n\n
+
+  ---------------------------------------------------\n
+  Data provided in relation to figure\n
+  ---------------------------------------------------\n
+  [Insert Data provided in relation to figure text]\n\n
+
+  ---------------------------------------------------\n
+  Notes on reproducing the figure from the provided data
+  ---------------------------------------------------\n
+  [Insert Notes on reproducing the figure from the provided data=campo nuevo, tengo que ver como se llama",
+  "authors": [
+    {
+      "firstname": "John SecondName",
+      "surname": "Simons" = 
+    },
+    {
+      "firstname": "Ölec", 
+      "surname": "Yhando"
+    }
+  ],
+  "bbox": {
+    "north": "[INSERT Spatial coverage - North]°",
+    "south": "[INSERT Spatial coverage - South]°",
+    "east": "[INSERT Spatial coverage - East]°",
+    "west": "[INSERT Spatial coverage - West]°"
+  },
+  "vertical_extent":{
+    "highest_level_bound": "[INSERT Highest Vertical Extent]",
+    "lowest_level_bound": "[INSERT Lowest Vertical Extent]",
+    "units": "[INSERT Unit of Vertical Extent]"
+   },
+  "resolution":"[INSERT Horizontal resolution] [INSERT Unit of Horizontal Resolution]",
+  "time_range": {
+    "start": "1960-01-01T00:00:00",
+    "end": "2100-12-31T23:59:59"
+  },
+  "lineage": "Data produced by Intergovernmental Panel on Climate Change (IPCC) authors and supplied for archiving at the Centre for Environmental Data Analysis (CEDA) by the Technical Support Unit (TSU) for IPCC Working Group I (WGI).\n
+  [Data files converted to BADC-CSV format by CEDA staff.\n] 
+  Data curated on behalf of the IPCC Data Distribution Centre (IPCC-DDC).",
+  "quality": "Data as provided by the IPCC",
+  "docs": [PUT THE DOCUMENTS IN THE FOLLOWING ORDER AND FORMAT LIKE THIS:
+    {
+      "title": "ORIGIN OF FIGURE (IPCC REPORT [SPM/TS/CHAPTER]): [AUTHOR NAMES] (2021). [TITLE]. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.",
+      "url": ""
+    },
+    {
+      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: (2021). [TITLE].",
+      "url": ""
+    },
+    {
+      "title": "CODE FOR FIGURE (archived at Zenodo)",
+      "url": ""
+    }
+    {
+      "title": "INPUT DATA USED IN FIGURE (archived at DKRZ)",
+      "url": ""
+    }        
+    {
+      "title": "INPUT DATASET 1: [CITATION FOR INPUT DATASET]",
+      "url": ""
+    }        
+    {
+      "title": "RELATED PUBLICATION FOR INPUT DATASET 1: [CITATION FOR RELATED PUBLICATION]",
+      "url": ""
+    }        
+    ],
+  "project": {
+    "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",
+    "title": "",
+    "description": "",
+    "PI": {
+      "firstname": "",
+      "lastname": ""
+    },
+    "funder": "",
+    "grant_number": ""
+  },
+  "instrument": {
+    "catalogue_url": "",
+    "title": "",
+    "description": ""
+  },
+  "computation": {
+    "catalogue_url": "",[the Summary for Policymakers/the Technical Summary Chapter [INSERT CHAPTER NUMBER]] of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+    "description": "[INSERT CAPTION - Tim should be able to output this from Figure Manager]"
+  }
+}
