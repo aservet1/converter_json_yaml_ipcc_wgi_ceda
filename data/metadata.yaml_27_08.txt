@@ -1,0 +1,94 @@
+{
+  "title": "Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure ^((title|extract_figure_number))>",
+  "description": "Data for Figure ^((title|extract_figure_number))> from Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
+
+  ^((field_ds_1_sentence_description|html_to_raw_text))>\n\n
+
+  ---------------------------------------------------\n
+  How to cite this dataset\n
+  ---------------------------------------------------\n
+  When citing this dataset, please include both the data citation below (under 'Citable as') and the following citation for the report component from which the figure originates:\n
+  ^((field_ds_chapter|citation_for_chapter))>\n\n
+
+  ---------------------------------------------------\n
+  Sources of additional information\n
+  ---------------------------------------------------\n
+  The following weblinks are provided in the Related Documents section of this catalogue record:\n
+  - Link to the report component containing the figure (Chapter ^((field_ds_chapter|extract_chapter_number))>)\n
+(*C1-)  - Link to the Supplementary Material for Chapter ^((field_ds_chapter|extract_chapter_number))>, which contains ^((field_ds_detailed_info|more_detailed_info))>details on the input data used in Table ^((field_ds_input_dataset_excel|input_data_table))>\n
+(*C2-)  - Link to the code for the figure, archived on Zenodo.\n
+  \n\n
+
+(*C3-)  ---------------------------------------------------\n
+(*C3-)  Figure subpanels\n                                   
+(*C3-)  ---------------------------------------------------\n
+(*C3-)  ^((field_ds_subpanel_information|html_to_raw_text))>\n\n
+
+  ---------------------------------------------------\n 
+  List of data provided\n                               
+  ---------------------------------------------------\n 
+^((field_ds_data_list|html_data_to_text))>\n\n
+                                                        
+  ---------------------------------------------------\n 
+  Data provided in relation to figure\n                 
+  ---------------------------------------------------\n 
+^((field_ds_description|html_data_to_text))>\n\n 
+
+  ",
+  "authors": ^((field_ds_authors|author_firstnames_surnames))> ,
+  "bbox": {
+    "north": "^((field_ds_sc_north))>",
+    "south": "^((field_ds_sc_south))>",
+    "east": "^((field_ds_sc_east))>",
+    "west": "^((field_ds_sc_west))>"
+  },
+  "vertical_extent":{
+    "highest_level_bound": "^((field_ds_ve_highest))>",
+    "lowest_level_bound": "^((field_ds_ve_lowest))>",
+    "units": "^((field_ds_hr))>"
+   },
+  "resolution":"^((field_ds_hr))> ^((field_ds_hr_unit))>",
+  "time_range": {
+    "start": "^((field_ds_tr_start_date|get_datetime_attribute_from_time_tags))>",
+    "end": "^((field_ds_tr_end_date|get_datetime_attribute_from_time_tags))>"
+  },
+  "lineage": "Data produced by Intergovernmental Panel on Climate Change (IPCC) authors and supplied for archiving at the Centre for Environmental Data Analysis (CEDA) by the Technical Support Unit (TSU) for IPCC Working Group I (WGI).\n
+  Data files converted to BADC-CSV format by CEDA staff.\n
+  Data curated on behalf of the IPCC Data Distribution Centre (IPCC-DDC).",
+  "quality": "Data as provided by the IPCC",
+  "docs":
+    {
+      "title": "ORIGIN OF FIGURE (IPCC REPORT CHAPTER):  ^((field_ds_chapter|citation_for_chapter))>",
+      "url": ""
+    }
+(*C1-)    ,{                                                                                                      
+(*C1-)      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: ^((field_ds_chapter|sm_citation_for_chapter))>", 
+(*C1-)      "url": "https://www.ipcc.ch/"                                                                         
+(*C1-)    }
+(*C2-)    ,{                                                  
+(*C2-)      "title": "CODE FOR FIGURE (archived at Zenodo)",  
+(*C2-)      "url": ""                                         
+(*C2-)    }                                                   
+    ],
+  "project": {
+    "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",
+    "title": "",
+    "description": "",
+    "PI": {
+      "firstname": "",
+      "lastname": ""
+    },
+    "funder": "",
+    "grant_number": ""
+  },
+  "instrument": {
+    "catalogue_url": "",
+    "title": "",
+    "description": ""
+  },
+  "computation": {
+    "catalogue_url": "",
+    "title": "Caption for Figure ^((title|extract_figure_number))> from Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+    "description": "^((field_ds_chapter$title|extract_fig_info_from_chapter_description))>"
+  }
+}
