@@ -1,0 +1,133 @@
+{
+  "title": "Chapter $${field_ds_chapter|extract_chapter_number} of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure [INSERT FIGURE NUMBER = ver si lo tengo hacer manualmente o se puede extraer]",
+  "description": "Data for Figure $${title|extract_figure_number} from Chapter $${field_ds_chapter|extract_chapter_number} of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
+
+  $${field_ds_1_sentence_description}\n\n
+
+  ---------------------------------------------------\n
+  How to cite this dataset\n
+  ---------------------------------------------------\n
+  When citing this dataset, please include both the data citation below (under 'Citable as') and the following citation for the report component from which the figure originates:\n
+  [Insert Citation for Chapter = esto va a ser un texto fijo.]\n\n
+  
+  ---------------------------------------------------\n
+  Sources of additional information\n
+  ---------------------------------------------------\n 
+  The following weblinks are provided in the Related Documents section of this catalogue record:\n
+
+  - Link to the report component containing the figure (Chapter $${field_ds_chapter|extract_chapter_number})\n  
+ 
+  - Link to the Supplementary Material for Chapter [$${field_ds_chapter|extract_chapter_number}], which contains [supporting information on the figure in Section [INSERT SECION NUMBER]) and ] details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]] # ver comentario que sigue
+
+# comentario: 
+## Te hago un comentario mas extenso porque este texto tiene varios condicionales:
+## 
+## 1) Hay que escribirlo solo si: field_ds_detailed_info tiene algun texto y/o si "field_ds_input_dataset_excel" es igual a: "Use chapter data tables". 
+## 
+## 2) Si hay texto en field_ds_detailed_inf, va la frase: "supporting information on the figure in Section [INSERT SECION NUMBER]) and". (Tener en cuenta que el "and" va solo si se cumplen las dos condiciones en 2) ).
+## Lo que aparece en field_ds_detailed_inf  va a ser algo asi: "bldblsdd (Section 1.SM.6) gsfd.". Hay que extraer el valor que esta luego de "Section" y antes del ")". Seran siempre uno o dos numeros (valores del 1 al 12), punto, un numero. Extraer eso y ponerlo donde dice: [INSERT SECION NUMBER].
+## 
+## 3) Si "field_ds_input_dataset_excel" es igual a: "Use chapter data tables", poner el texto: "details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]". El valor de [INSERT INPUT DATA TABLE NUMBER], se extrae de la primera fila de la tabla asociada a ese capitulo.
+## 
+# fin comentario.
+
+- <...>[Link to the code for the figure, archived on Zenodo] # solo se escribe si field_ds_code_archival es "Yes" 
+- [Link to input data used in the figure, archived at DKRZ] # hay que agregar el campo en el formulario, no lo tengo, por el momento dejarlo sin hacer\n\n
+  
+  ---------------------------------------------------\n
+  Figure subpanels\n
+  ---------------------------------------------------\n
+  $${field_ds_subpanel_information}\n\n
+
+  ---------------------------------------------------\n
+  List of data provided\n
+  ---------------------------------------------------\n
+  $${field_ds_data_list}\n\n
+
+  ---------------------------------------------------\n
+  Data provided in relation to figure\n
+  ---------------------------------------------------\n
+  $${field_ds_description}\n\n
+
+  ---------------------------------------------------\n
+  Notes on reproducing the figure from the provided data
+  ---------------------------------------------------\n
+  [Insert Notes on reproducing the figure from the provided data=campo nuevo, tengo que ver como se llama",
+  "authors": [
+    {
+      "firstname": "John SecondName", = field_ds_authors (sacar el primer nombre)
+      "surname": "Simons" = field_ds_authors (sacar el apellido)
+    },
+    {
+      "firstname": "Ölec", =idem arriba
+      "surname": "Yhando" =idem arriba
+    }
+  ],
+  "bbox": {
+    "north": "$${field_ds_sc_north}°",
+    "south": "$${field_ds_sc_south}°",
+    "east":  "$${field_ds_sc_east}°",
+    "west":  "$${field_ds_sc_west}°"
+  },
+  "vertical_extent":{
+    "highest_level_bound": "$${field_ds_ve_highest}",
+    "lowest_level_bound": "$${field_ds_ve_lowest}",
+    "units": "[INSERT Unit of Vertical Extent]"
+   },
+  "resolution":"$${field_ds_hr} $${field_ds_hr_unit}",
+  "time_range": {
+    "start": "1960-01-01T00:00:00", = field_ds_tr_start_date (no estoy segura si hay que hacer una conversion de formato entre lo que sale del json y lo que va aca... espero que noooo) 
+    "end": "2100-12-31T23:59:59" = field_ds_tr_end_date (igual comentario que arriba)
+  },
+  "lineage": "Data produced by Intergovernmental Panel on Climate Change (IPCC) authors and supplied for archiving at the Centre for Environmental Data Analysis (CEDA) by the Technical Support Unit (TSU) for IPCC Working Group I (WGI).\n
+  [Data files converted to BADC-CSV format by CEDA staff.\n] 
+  Data curated on behalf of the IPCC Data Distribution Centre (IPCC-DDC).",
+  "quality": "Data as provided by the IPCC",
+  "docs": [Este es un comentario interno: PUT THE DOCUMENTS IN THE FOLLOWING ORDER AND FORMAT LIKE THIS:
+    {
+      "title": "ORIGIN OF FIGURE (IPCC REPORT [SPM/TS/CHAPTER]): [AUTHOR NAMES] (2021). [TITLE]. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.", # texto fijo, todavia hay que definirlo
+      "url": "" # fijo
+    },
+    {
+      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: (2021). [TITLE].", # texto fijo a definir, solo se escribe si se activa el " - Link to the Supplementary Material for Chapter..." 
+      "url": "" # fijo, solo se escribe si se activa el " - Link to the Supplementary Material for Chapter..." 
+    },
+    {
+      "title": "CODE FOR FIGURE (archived at Zenodo)", # solo se escribe si field_ds_code_archival_status es "Yes"
+      "url": "" # solo se escribe si field_ds_code_archival_status es "Yes", lo tengo que sacar de una tabla, no la tengo aun
+    }
+    {
+      "title": "INPUT DATA USED IN FIGURE (archived at DKRZ)", #solo se escribe si se da una condicion en un campo que no tengo aun
+      "url": "" #solo se escribe si se da una condicion en un campo que no tengo aun
+    }        
+    {
+      "title": "INPUT DATASET 1: [CITATION FOR INPUT DATASET]", #se escribe si "field_ds_input_dataset_excel" es igual a: "Use chapter data tables", se pone el valor de una celda de una tabla, que aun no tengo
+      "url": "" #idem arriba, se pone el valor de la celda de al lado
+    }        
+    {
+      "title": "RELATED PUBLICATION FOR INPUT DATASET 1: [CITATION FOR RELATED PUBLICATION]",# idem arriba, se pone el valor de la celda de al lado
+      "url": "" # idem arriba, se pone el valor de la celda de al lado
+    }        
+    ],
+  "project": {
+    "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",
+    "title": "",
+    "description": "",
+    "PI": {
+      "firstname": "",
+      "lastname": ""
+    },
+    "funder": "",
+    "grant_number": ""
+  },
+  "instrument": {
+    "catalogue_url": "",
+    "title": "",
+    "description": ""
+  },
+  "computation": {
+    "catalogue_url": "",
+    "title": "Caption for Figure [INSERT FIGURE NUMBER] from Chapter $${field_ds_chapter|extract_chapter_number} of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+    "description": "[INSERT CAPTION - Tim should be able to output this from Figure Manager]"
+  }
+}
