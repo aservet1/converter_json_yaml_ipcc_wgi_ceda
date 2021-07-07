@@ -38,6 +38,7 @@
   Notes on reproducing the figure from the provided data
   ---------------------------------------------------\n
   [Insert Notes on reproducing the figure from the provided data=campo nuevo, tengo que ver como se llama",
+
   "authors": [
     {
       "firstname": "John SecondName",
@@ -68,7 +69,7 @@
   [Data files converted to BADC-CSV format by CEDA staff.\n] 
   Data curated on behalf of the IPCC Data Distribution Centre (IPCC-DDC).",
   "quality": "Data as provided by the IPCC",
-  "docs": [PUT THE DOCUMENTS IN THE FOLLOWING ORDER AND FORMAT LIKE THIS:
+  "docs":
     {
       "title": "ORIGIN OF FIGURE (IPCC REPORT [SPM/TS/CHAPTER]): [AUTHOR NAMES] (2021). [TITLE]. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.",
       "url": ""

@@ -1,6 +1,6 @@
 {
   "title": "Chapter [INSERT CHAPTER NUMBER= sacar el numero de field_ds_chapter] of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure [INSERT FIGURE NUMBER = ver si lo tengo hacer manualmente o se puede extraer]",
-  "description": "Data for Figure [INSERT FIGURE NUMBER= ver si lo tengo hacer manualmente o se puede extraer] from Chapter [INSERT CHAPTER NUMBER= sacar el numero de field_ds_chapter] of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
+  "description": "Data for Figure [INSERT FIGURE NUMBER= 'title' from json, only take the number (remove letters and spaces)] from Chapter [INSERT CHAPTER NUMBER= sacar el numero de field_ds_chapter] of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
   
   [INSERT One sentence figure description = field_ds_1_sentence_description]\n\n
   
@@ -13,26 +13,26 @@
   ---------------------------------------------------\n
   Sources of additional information\n
   ---------------------------------------------------\n 
-  The following weblinks are provided in the Related Documents section of this catalogue record:\n [LO SIGUIENTE ES SOLO TEXTO, LOS LINKS LOS VAMOS A TENER QUE AGREGAR AL FINAL DE ESTE YAML]
+  The following weblinks are provided in the Related Documents section of this catalogue record:\n
 
   - Link to the report component containing the figure (Chapter [INSERT CHAPTER NUMBER = sacar el numero de field_ds_chapter])\n  
  
-  - Link to the Supplementary Material for Chapter [[INSERT CHAPTER NUMBER]], which contains [supporting information on the figure in Section [INSERT SECION NUMBER]) and ] details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]] # ver comentario que sigue
+  - <$$$>Link to the Supplementary Material for Chapter [[INSERT CHAPTER NUMBER]], which contains [supporting information on the figure in Section [INSERT SECION NUMBER]) and ] details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]] # ver comentario que sigue
 
 # comentario: 
-Te hago un comentario mas extenso porque este texto tiene varios condicionales:
-
-1) Hay que escribirlo solo si: field_ds_detailed_info tiene algun texto y/o si "field_ds_input_dataset_excel" es igual a: "Use chapter data tables". 
-
-2) Si hay texto en field_ds_detailed_inf, va la frase: "supporting information on the figure in Section [INSERT SECION NUMBER]) and". (Tener en cuenta que el "and" va solo si se cumplen las dos condiciones en 2) ).
-Lo que aparece en field_ds_detailed_inf  va a ser algo asi: "bldblsdd (Section 1.SM.6) gsfd.". Hay que extraer el valor que esta luego de "Section" y antes del ")". Seran siempre uno o dos numeros (valores del 1 al 12), punto, un numero. Extraer eso y ponerlo donde dice: [INSERT SECION NUMBER].
-
-3) Si "field_ds_input_dataset_excel" es igual a: "Use chapter data tables", poner el texto: "details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]". El valor de [INSERT INPUT DATA TABLE NUMBER], se extrae de la primera fila de la tabla asociada a ese capitulo.
-
+## Te hago un comentario mas extenso porque este texto tiene varios condicionales:
+## 
+## 1) Hay que escribirlo solo si: field_ds_detailed_info tiene algun texto y/o si "field_ds_input_dataset_excel" es igual a: "Use chapter data tables". 
+## 
+## 2) Si hay texto en field_ds_detailed_inf, va la frase: "supporting information on the figure in Section [INSERT SECION NUMBER]) and". (Tener en cuenta que el "and" va solo si se cumplen las dos condiciones en 2) ).
+## Lo que aparece en field_ds_detailed_inf  va a ser algo asi: "bldblsdd (Section 1.SM.6) gsfd.". Hay que extraer el valor que esta luego de "Section" y antes del ")". Seran siempre uno o dos numeros (valores del 1 al 12), punto, un numero. Extraer eso y ponerlo donde dice: [INSERT SECION NUMBER].
+## 
+## 3) Si "field_ds_input_dataset_excel" es igual a: "Use chapter data tables", poner el texto: "details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]". El valor de [INSERT INPUT DATA TABLE NUMBER], se extrae de la primera fila de la tabla asociada a ese capitulo.
+## 
 # fin comentario.
 
-- [Link to the code for the figure, archived on Zenodo] # solo se escribe si field_ds_code_archival es "Yes" 
-- [Link to input data used in the figure, archived at DKRZ]# hay que agregar el campo en el formulario, no lo tengo, por el momento dejarlo sin hacer\n\n
+- <...>[Link to the code for the figure, archived on Zenodo] # solo se escribe si field_ds_code_archival es "Yes" 
+- [Link to input data used in the figure, archived at DKRZ] # hay que agregar el campo en el formulario, no lo tengo, por el momento dejarlo sin hacer\n\n
   
   ---------------------------------------------------\n
   Figure subpanels\n
