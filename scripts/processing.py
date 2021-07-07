@@ -44,7 +44,7 @@ def scan(text):
 			debuglog('caught a replaceText:',m.group(),'\n===')
 			return Token(m.group(), 'replaceText')
 			
-		m = re.compile(r'[^$]*').match(text)
+		m = re.compile(r'[^$]*').match(text) # TODO: handle stray dollar signs
 		if(m):
 			debuglog('caught a plainText:',m.group(),'\n===')
 			return Token(m.group(), 'plainText')
@@ -55,8 +55,8 @@ def scan(text):
 	token_stream = []
 	while len(text):
 		token = next_token(text)
+		token_stream.append(token)
 		text = text[len(token_stream[-1].lex):]
-		token_stream.append(text)
 	return token_stream
 
 def getFn(function):
