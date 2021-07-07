@@ -1,9 +1,9 @@
 [
 	{
 		"nid": "634",
-		"title": "Example Figure (Figure 13.1)",
+		"title": "Figure 13.1",
 		"field_ds_ar6_figure": "40",
-		"field_ds_chapter": "",
+		"field_ds_chapter": "Chapter 123: xyz",
 		"field_ds_issue": "&lt;p&gt;Please provide the data files&lt;/p&gt;\r\n",
 		"field_ds_dms_data_folder": "<a href=\"https://wg1.ipcc.ch/apps/dm/filemanager.php?q=5615\">https://wg1.ipcc.ch/apps/dm/filemanager.php?q=5615</a>",
 		"field_ds_1_sentence_description": "<p>Figure 13.1 shows observed global warming since the mid 20th century and two emission scenarios to 2100.</p>",
