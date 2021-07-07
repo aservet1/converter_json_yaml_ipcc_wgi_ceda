@@ -91,7 +91,7 @@ def process(tok):
 		else:
 			text, function = lex.split('|')
 			fn = getFn(function)
-			return fn(text)
+			return fn(JSON_DATA[text])
 	else:
 		print('invalid token kind!!',tok.kind)
 		exit(2)
