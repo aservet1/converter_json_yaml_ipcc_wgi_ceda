@@ -1,2 +1,4 @@
 figure out BeautifulSoup
 verify your current replaces worked
+
+INSERT CAPTION -- JSON field name will be specified later, make sure to pick that part up when you have that info
