@@ -1,0 +1,2 @@
+figure out BeautifulSoup
+verify your current replaces worked
