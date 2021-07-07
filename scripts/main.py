@@ -4,8 +4,6 @@ import json
 from sys import argv
 from processing import process_text
 
-import my_globals
-
 try:
 	json_file = argv[1]
 	template_file = argv[2]
