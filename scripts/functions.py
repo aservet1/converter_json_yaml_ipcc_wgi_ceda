@@ -8,10 +8,10 @@ def extract_chapter_number(text): # format: 'Chapter N: XXXX', extracting N
 	return ''.join([ c for c in text.split(':')[0] if c.isdigit() ])
 
 def BLANK(text):
-	return "<<NOT YET IMPLEMENTED>>"
+	return "1234567890"
 
 def extract_section_number(text):
 	return "TO-IMPLEMENT: extract_section_number"
 
 def get_author_names(text):
-	return "TO-IMPLEMENT: get_author_names"
+	return "[ {\"TO-IMPLEMENT\": \"get_author_names\"} ]"
