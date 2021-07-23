@@ -12,4 +12,4 @@ with open(src) as fd:
 with open(dest,'w') as fd:
 	fd.write(text)
 
-print('done')
+print(' )..) done')
