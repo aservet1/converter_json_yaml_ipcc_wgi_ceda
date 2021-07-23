@@ -1,5 +1,3 @@
-figure out BeautifulSoup
-	html list to text list (is regex removing HTML tags enough...? look into why you shouldnt use regex for HTML other than vague mentions of edge cases, and see if that applies here)
-
 INSERT CAPTION -- JSON field name will be specified later, make sure to pick that part up when you have that info
 
+find out how to succinctly write out the rules for the conditional text building thingy
