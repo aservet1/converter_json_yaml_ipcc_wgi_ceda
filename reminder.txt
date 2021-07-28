@@ -1,0 +1,40 @@
+>>> txt
+'lkasjdflkasjfd;lkjsafd "sdflksdf" lksdajflkasfd'
+>>> txt.replace('"','\'')
+"lkasjdflkasjfd;lkjsafd 'sdflksdf' lksdajflkasfd"
+>>>
+
+=========field_ds_ar6_figure_1==============
+<p>panel a</p>
+<ul>
+	<li>...</li>
+	<li>...</li>
+	<li>...</li>
+	<li>...</li>
+</ul>
+<p>panel b</p>
+<ul>
+	<li>...</li>
+	<li>...</li>
+	<li>...</li>
+	<li>...</li>
+</ul>
+...
+do a try/catch to see if the format is not like this, and signal if not (so you need to know that the format is different)
+text could be bold
+
+panael a:
+
+- ...
+- ...
+- ...
+- ...
+
+
+panael b:
+
+- ...
+- ...
+- ...
+- ...
+============================================

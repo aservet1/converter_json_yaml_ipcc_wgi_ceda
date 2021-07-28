@@ -1,7 +1,7 @@
 import re
 
 OPENER = '^(('; CLOSER = '))>';
-JSON_DATA = {}
+DATA = {}
 
 def debuglog(*args):
 	verbose = 0
@@ -9,7 +9,7 @@ def debuglog(*args):
 		print('>>',''.join(args))
 
 def process_text(text, json_data):
-	global JSON_DATA; JSON_DATA = json_data
+	global DATA; DATA = json_data
 	text = remove_my_special_comments(text)
 	text = straightforward_replacements(text)
 	return text
@@ -33,19 +33,23 @@ def remove_my_special_comments(text): # TODO make this obsolete by the time you'
 function_module = __import__('functions')
 def getFn(function_name):
 	if function_name == None: # no additional processing of the data needed
-		return (lambda x : x)
+		return (lambda x : x) # identity function
 	else:
 		return getattr(function_module, function_name)
 
 def get_replacement(text):
-	if not '|' in text:
+	if not '|' in text: # straighforward field lookup
 		info = (text, None)
 	else:
 		info = text.split('|')
-	text, function_name = info
+	key, function_name = info
 	fn = getFn(function_name)
 
-	if not text in JSON_DATA.keys(): # TODO this should never happen, by the time you have all of the data provided
-		return fn(text)
+	if not key in DATA.keys(): # TODO this should never happen, by the time you have all of the data provided
+		print('key not found:',key)
+		return ''
+		#return fn(key)
 	else:
-		return fn(JSON_DATA[text])
+		return fn(DATA[key])
+
+

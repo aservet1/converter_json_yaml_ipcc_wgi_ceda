@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import yaml
 from sys import argv
 from processing import process_text
 
@@ -20,4 +21,4 @@ with open(json_file) as fd:
 processed = process_text(template_data, json_data)
 
 with open(output_file,'w') as fd:
-	fd.write(processed)
+	fd.write(yaml.safe_load(yaml.dump(processed)))
