@@ -1,0 +1,37 @@
+Hola Ale! 
+
+Como estas? Me dijo tu mama que tenes que prepararte para una entrevista para este martes,
+asi que no te quiero joder con esto ahora. Solo te mando todo para que lo tengas, y lo
+puedas hacer cuando tengas un rato. 
+
+Creo que simplifique las cosas lo mas que pude, pero por supuesto preguntame todo lo que
+necesites, y si queres arreglamos para hablar y asi te sacas todas las dudas.
+
+La cosa seria asi:
+
+    1) El file "metadata.yaml_27_08.txt" es el que tenes que usar como base.
+
+    2) El file "Comments_Ale.docx" tiene todas las indicaciones, condicionales,
+        etc (los numeros de lineas corresponden al file de 1) ).
+
+    3) El file Chapter_Text.zip tiene los archivos que vas a usar en Line 100
+        (no te preocupes por que faltan algunos capitulos, yo los agregare
+        cuando me los den)
+
+    4) Los files sm_cit.txt y chapter_cit.txt se usan para otros condicionales
+        (estan mencionados en "Comments_Ale.docx")
+
+Avisame si te sirve que te mande algunos ejemplos de json para jugar. Ahora te puedo mandar
+todos los que quieras.
+
+Si lo pudiera tener para finales de la semana que viene, para mi estaria genial, pero bueno,
+vamos viendo como sale la cosa.
+
+Con esto ya terminariamos con esta historia. Perdon que se haya hecho tan larga, me faltaba
+siempre un pedazo de informacion, y me la fueron cambiando con el tiempo.
+
+Mil, mil gracias. Y ojala nos veamos pronto, me quede con ganas de pasar untiempo mas tranquilo
+con vos.
+
+Te quiero,
+Lina
