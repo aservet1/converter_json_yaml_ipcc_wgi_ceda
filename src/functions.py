@@ -18,14 +18,12 @@ def extract_chapter_number(text): # format: 'Chapter N: XXXX', extracting N
 	return ''.join([ c for c in text.split(':')[0] if c.isdigit() ])
 
 def citation_for_chapter(chapter_info_field):
-	# print(">> chapter_info_field:",chapter_info_field)
 	chapter_num = int (
-		extract_chapter_number(chapter_info_field)
+		extract_chapter_number (
+			chapter_info_field
+		)
 	)
 	return CHAPTER_CIT[chapter_num - 1]
-
-def BLANK(text):
-	return "___blankkk___"
 
 def extract_section_number(text):
 	return "TO-IMPLEMENT: extract_section_number"

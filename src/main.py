@@ -12,17 +12,17 @@ def text_file_as_list_of_lines(fname):
 	return lines
 
 try:
-	json_file = argv[1]
+	form_info_file = argv[1]
 	output_file = argv[2]
 except IndexError:
 	print("usage:",argv[0],"form_info_json_file output_file")
 	exit(2)
 
-with open(json_file) as fp:
-	json_data = json.load(fp)[0] # el JSON siempre va a ser una lista con un elemento?
+with open(form_info_file) as fp:
+	form_data = json.load(fp)[0] # el JSON siempre va a ser una lista con un elemento?
 
 data = {
-	"form_info": json_data,
+	"form_data": form_data,
 	"chapter_cit": text_file_as_list_of_lines('data/chapter_cit.txt'),
 	"sm_cit": text_file_as_list_of_lines('data/sm_cit.txt')
 }
