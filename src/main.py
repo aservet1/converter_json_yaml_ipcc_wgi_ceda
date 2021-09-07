@@ -3,22 +3,34 @@
 import json
 import yaml
 from sys import argv
+
 from processing import process_text
+
+def text_file_as_list_of_lines(fname):
+	with open(fname) as fp:
+		lines = [ line.strip() for line in fp.readlines() ]
+	return lines
 
 try:
 	json_file = argv[1]
-	template_file = argv[2]
-	output_file = argv[3]
+	output_file = argv[2]
 except IndexError:
-	print("usage:",argv[0],"json_file template_file output_file")
+	print("usage:",argv[0],"form_info_json_file output_file")
 	exit(2)
 
-with open(template_file) as fd:
-	template_data = fd.read()
-with open(json_file) as fd:
-	json_data = json.load(fd)[0] # el JSON siempre va a ser una lista con un elemento?
+with open(json_file) as fp:
+	json_data = json.load(fp)[0] # el JSON siempre va a ser una lista con un elemento?
 
-processed = process_text(template_data, json_data)
+data = {
+	"form_info": json_data,
+	"chapter_cit": text_file_as_list_of_lines('data/chapter_cit.txt'),
+	"sm_cit": text_file_as_list_of_lines('data/sm_cit.txt')
+}
 
-with open(output_file,'w') as fd:
-	fd.write(yaml.safe_load(yaml.dump(processed)))
+with open('data/metadata.yaml_27_08.txt') as fp:
+	template = fp.read()
+
+processed = process_text(template, data)
+
+with open(output_file,'w') as fp:
+	fp.write(yaml.safe_load(yaml.dump(processed)))
