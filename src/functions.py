@@ -1,3 +1,4 @@
+from bs4 import BeautifulSoup
 
 CHAPTER_CIT = []
 SM_CIT = []
@@ -31,3 +32,12 @@ def extract_section_number(text):
 def get_author_names(text):
 	return "[ {\"TO-IMPLEMENT\": \"get_author_names\"} ]"
 
+def html_to_raw_text(text):
+	return BeautifulSoup(text, "html.parser").get_text()
+
+
+
+# exaple expected input: <time datetime="1979-01-01T12:00:00Z" class="datetime">Mon, 01/01/1979 - 12:00</time>
+#   extract datetime attribute
+def get_datetime_attribute_from_time_tags(text):
+	return BeautifulSoup(text, "html.parser").find('time')['datetime']
