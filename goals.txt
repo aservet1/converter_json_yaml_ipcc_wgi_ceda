@@ -1,3 +1,11 @@
+goal: find out if you can have pandoc not mess up the special symbols when converting docx to text
+	maybe a python docx to text library can do this better. or any tool/library from any language
+		i can even write a docx-to-txt-properly-handle-symbols.anylanguage script if it's doable
+		and does the same as or better than what copy/paste does to preserve symbols
+	remember to ask lina what the people told her about how to handle the symbol thing (if CO2 is
+	better/worse than CO~2~)
+		note that CO~2~ may or may not have the benefit of being able to convert back to a subscript
+		if theyre not working in plain text and may need it that way
 
 an ideal goal:
 	document the ^(())> expression syntax formally
