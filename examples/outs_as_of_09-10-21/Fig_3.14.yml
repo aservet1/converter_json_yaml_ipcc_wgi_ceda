@@ -1,0 +1,105 @@
+{
+  "title": "Chapter 3 of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure 3.14",
+  "description": "Data for Figure 3.14 from Chapter 3 of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
+
+  Figure 3.14 shows wet and dry region tropical mean (30°S-30°N) annual precipitation anomalies.\n\n
+
+  ---------------------------------------------------\n
+  How to cite this dataset\n
+  ---------------------------------------------------\n
+  When citing this dataset, please include both the data citation below (under 'Citable as') and the following citation for the report component from which the figure originates:\n
+  Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.\n\n
+
+  ---------------------------------------------------\n
+  Sources of additional information\n
+  ---------------------------------------------------\n
+  The following weblinks are provided in the Related Documents section of this catalogue record:
+  - Link to the report component containing the figure (Chapter 3)
+  - Link to the Supplementary Material for Chapter 3, which contains details on the input data used in Table 3.SM.1>
+  - Link to the code for the figure, archived on Zenodo. 
+  \n\n
+
+  ---------------------------------------------------\n
+  Figure subpanels\n                                   
+  ---------------------------------------------------\n
+  <p>The figure has four panels, with data provided for all panels in subdirectories named panel_a, panel_b, panel_c and panel_d.</p>\n\n              
+                                                        
+  ---------------------------------------------------\n 
+  List of data provided\n                               
+  ---------------------------------------------------\n 
+  [Insert List of data provided text]\n\n               
+                                                        
+  ---------------------------------------------------\n 
+  Data provided in relation to figure\n                 
+  ---------------------------------------------------\n 
+  [Insert Data provided in relation to figure text]\n\n 
+
+  ",
+  "authors": [
+    {
+      "firstname": "[nombre1]",
+      "surname": "[apellido1]"
+    }
+    ,{
+      "firstname": "[nombre2]",
+      "surname": "[apellido2]"
+    }
+  ],
+  "bbox": {
+    "north": "30.00",
+    "south": "-35.00",
+    "east": "-180.00",
+    "west": "180.00"
+  },
+  "vertical_extent":{
+    "highest_level_bound": "0.00",
+    "lowest_level_bound": "0.00",
+    "units": ""
+   },
+  "resolution":"[INSERT Horizontal resolution] [INSERT Unit of Horizontal Resolution]",
+  "time_range": {
+    "start": "1988-01-01T12:00:00Z",
+    "end": "2020-12-31T12:00:00Z"
+  },
+  "lineage": "Data produced by Intergovernmental Panel on Climate Change (IPCC) authors and supplied for archiving at the Centre for Environmental Data Analysis (CEDA) by the Technical Support Unit (TSU) for IPCC Working Group I (WGI).\n
+  Data files converted to BADC-CSV format by CEDA staff.\n
+  Data curated on behalf of the IPCC Data Distribution Centre (IPCC-DDC).",
+  "quality": "Data as provided by the IPCC",
+  "docs":
+    {
+      "title": "ORIGIN OF FIGURE (IPCC REPORT CHAPTER):  Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.",
+      "url": ""
+    }
+    ,{                                                                                                      
+      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System Supplementary Material. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)].", 
+      "url": "https://www.ipcc.ch/"                                                                         
+    }                                                                                                       
+    ,{                                                  
+      "title": "CODE FOR FIGURE (archived at Zenodo)",  
+      "url": ""                                         
+    }                                                   
+    ],
+  "project": {
+    "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",
+    "title": "",
+    "description": "",
+    "PI": {
+      "firstname": "",
+      "lastname": ""
+    },
+    "funder": "",
+    "grant_number": ""
+  },
+  "instrument": {
+    "catalogue_url": "",
+    "title": "",
+    "description": ""
+  },
+  "computation": {
+    "catalogue_url": "",
+    "title": "Chapter 3 of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+    "description": " Wet (a) and dry (b) region tropical mean (30°S-30°N) annual precipitation anomalies.** Observed data are shown with black lines (GPCP), ERA5 reanalysis in grey, single model simulations results are shown with light blue/red lines (CMIP6), and multi-model-mean results are shown with dark blue/red lines (CMIP6).  Wet and dry region annual anomalies are calculated as the running mean over 12 months relative to a 1988-2020 base period. The regions are defined as the wettest third and driest third of the surface area, calculated for the observations and for each model separately for each season (following Polson and Hegerl, 2017). Scaling factors (panels c,d) are calculated for the combination of the wet and dry region mean, where the observations, reanalysis and all the model simulations are first standardised using the mean standard deviation of the pre-industrial control simulations. Two total least squares regression methods are used: noise in variables (following Polson and Hegerl, 2017) which estimates a best estimate and a 5-95% confidence interval using the pre-industrial controls (circle and thick green line) and the pre-industrial controls with double the variance (thin green line); and a bootstrap method (DelSole et al., 2019) (5-–95% confidence interval shown with a purple line and best estimate with a purple circle). Panel (c) shows results for GPCP and panel (d) for ERA5. Figure is adapted from Schurer et al. (2020). Further details on data sources and processing are available in the chapter data table (Table 3.SM.1).
+
+"
+  }
+}

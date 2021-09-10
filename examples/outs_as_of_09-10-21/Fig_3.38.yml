@@ -1,0 +1,99 @@
+{
+  "title": "Chapter 3 of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure 3.38",
+  "description": "Data for Figure 3.38 from Chapter 3 of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
+
+  Figure 3.28 shows model evaluation of ENSO teleconnection for 2m-temperature and precipitation in boreal winter (December-January-February).
+ \n\n
+
+  ---------------------------------------------------\n
+  How to cite this dataset\n
+  ---------------------------------------------------\n
+  When citing this dataset, please include both the data citation below (under 'Citable as') and the following citation for the report component from which the figure originates:\n
+  Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.\n\n
+
+  ---------------------------------------------------\n
+  Sources of additional information\n
+  ---------------------------------------------------\n
+  The following weblinks are provided in the Related Documents section of this catalogue record:
+  - Link to the report component containing the figure (Chapter 3)
+  - Link to the Supplementary Material for Chapter 3, which contains details on the input data used in Table 3.SM.1>
+  \n\n
+
+  ---------------------------------------------------\n
+  Figure subpanels\n                                   
+  ---------------------------------------------------\n
+  <p>The data for all subpanels in provided.</p>\n\n              
+                                                        
+  ---------------------------------------------------\n 
+  List of data provided\n                               
+  ---------------------------------------------------\n 
+  [Insert List of data provided text]\n\n               
+                                                        
+  ---------------------------------------------------\n 
+  Data provided in relation to figure\n                 
+  ---------------------------------------------------\n 
+  [Insert Data provided in relation to figure text]\n\n 
+
+  ",
+  "authors": [
+    {
+      "firstname": "[nombre1]",
+      "surname": "[apellido1]"
+    }
+    ,{
+      "firstname": "[nombre2]",
+      "surname": "[apellido2]"
+    }
+  ],
+  "bbox": {
+    "north": "90.00",
+    "south": "-90.00",
+    "east": "-180.00",
+    "west": "180.00"
+  },
+  "vertical_extent":{
+    "highest_level_bound": "0.00",
+    "lowest_level_bound": "0.00",
+    "units": ""
+   },
+  "resolution":"[INSERT Horizontal resolution] [INSERT Unit of Horizontal Resolution]",
+  "time_range": {
+    "start": "1958-01-01T12:00:00Z",
+    "end": "2014-12-31T12:00:00Z"
+  },
+  "lineage": "Data produced by Intergovernmental Panel on Climate Change (IPCC) authors and supplied for archiving at the Centre for Environmental Data Analysis (CEDA) by the Technical Support Unit (TSU) for IPCC Working Group I (WGI).\n
+  Data files converted to BADC-CSV format by CEDA staff.\n
+  Data curated on behalf of the IPCC Data Distribution Centre (IPCC-DDC).",
+  "quality": "Data as provided by the IPCC",
+  "docs":
+    {
+      "title": "ORIGIN OF FIGURE (IPCC REPORT CHAPTER):  Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.",
+      "url": ""
+    }
+    ,{                                                                                                      
+      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System Supplementary Material. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)].", 
+      "url": "https://www.ipcc.ch/"                                                                         
+    }                                                                                                       
+    ],
+  "project": {
+    "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",
+    "title": "",
+    "description": "",
+    "PI": {
+      "firstname": "",
+      "lastname": ""
+    },
+    "funder": "",
+    "grant_number": ""
+  },
+  "instrument": {
+    "catalogue_url": "",
+    "title": "",
+    "description": ""
+  },
+  "computation": {
+    "catalogue_url": "",
+    "title": "Chapter 3 of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+ "description": " Model evaluation of ENSO teleconnection for 2m-temperature and precipitation in boreal winter (December-January-February).** Teleconnections are identified by linear regression with the Niño 3.4 SST index based on ERSSTv5 during the period 1958-2014. Maps show observed patterns for temperature from the Berkeley Earth dataset over land and from ERSSTv5 over ocean (ºC, top) and for precipitation from GPCC over land (shading, mm day^–1^) and GPCP worldwide (contours, period: 1979-2014). Distributions of regression coefficients (grey histograms) are provided for a subset of AR6 reference regions defined in Atlas (Section A1.3) for temperature (top) and precipitation (bottom). All fields are linearly detrended prior to computation. Multi-model multi-member ensemble means are indicated by thick vertical black lines. Blue vertical lines show three observational estimates of temperature, based on Berkeley Earth, GISTEMP and CRUTS datasets, and two observational estimates of precipitation, based on GPCC and CRUTS datasets. Further details on data sources and processing are available in the chapter data table (Table 3.SM.1). "
+  }
+}

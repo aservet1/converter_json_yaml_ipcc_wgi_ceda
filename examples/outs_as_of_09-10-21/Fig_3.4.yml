@@ -1,0 +1,104 @@
+{
+  "title": "Chapter 3 of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure 3.4",
+  "description": "Data for Figure 3.4 from Chapter 3 of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
+
+  Figure 3.4 shows observed and simulated time series of the anomalies in annual and global mean near-surface air temperature (GSAT).
+ \n\n
+
+  ---------------------------------------------------\n
+  How to cite this dataset\n
+  ---------------------------------------------------\n
+  When citing this dataset, please include both the data citation below (under 'Citable as') and the following citation for the report component from which the figure originates:\n
+  Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.\n\n
+
+  ---------------------------------------------------\n
+  Sources of additional information\n
+  ---------------------------------------------------\n
+  The following weblinks are provided in the Related Documents section of this catalogue record:
+  - Link to the report component containing the figure (Chapter 3)
+  - Link to the Supplementary Material for Chapter 3, which contains details on the input data used in Table 3.SM.1>
+  - Link to the code for the figure, archived on Zenodo. 
+  \n\n
+
+  ---------------------------------------------------\n
+  Figure subpanels\n                                   
+  ---------------------------------------------------\n
+  <p>The figure has two panels, with data provided for all panels in subdirectories named panel_a and panel_b.</p>\n\n              
+                                                        
+  ---------------------------------------------------\n 
+  List of data provided\n                               
+  ---------------------------------------------------\n 
+  [Insert List of data provided text]\n\n               
+                                                        
+  ---------------------------------------------------\n 
+  Data provided in relation to figure\n                 
+  ---------------------------------------------------\n 
+  [Insert Data provided in relation to figure text]\n\n 
+
+  ",
+  "authors": [
+    {
+      "firstname": "[nombre1]",
+      "surname": "[apellido1]"
+    }
+    ,{
+      "firstname": "[nombre2]",
+      "surname": "[apellido2]"
+    }
+  ],
+  "bbox": {
+    "north": "90.00",
+    "south": "-90.00",
+    "east": "-180.00",
+    "west": "180.00"
+  },
+  "vertical_extent":{
+    "highest_level_bound": "0.00",
+    "lowest_level_bound": "0.00",
+    "units": ""
+   },
+  "resolution":"[INSERT Horizontal resolution] [INSERT Unit of Horizontal Resolution]",
+  "time_range": {
+    "start": "1850-01-01T12:00:00Z",
+    "end": "2014-12-31T12:00:00Z"
+  },
+  "lineage": "Data produced by Intergovernmental Panel on Climate Change (IPCC) authors and supplied for archiving at the Centre for Environmental Data Analysis (CEDA) by the Technical Support Unit (TSU) for IPCC Working Group I (WGI).\n
+  Data files converted to BADC-CSV format by CEDA staff.\n
+  Data curated on behalf of the IPCC Data Distribution Centre (IPCC-DDC).",
+  "quality": "Data as provided by the IPCC",
+  "docs":
+    {
+      "title": "ORIGIN OF FIGURE (IPCC REPORT CHAPTER):  Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.",
+      "url": ""
+    }
+    ,{                                                                                                      
+      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: Eyring, V., N. P. Gillett, K. M. Achuta Rao, R. Barimalala, M. Barreiro Parrillo, N. Bellouin, C. Cassou, P. J. Durack, Y. Kosaka, S. McGregor, S. Min, O. Morgenstern, Y. Sun, 2021, Human Influence on the Climate System Supplementary Material. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)].", 
+      "url": "https://www.ipcc.ch/"                                                                         
+    }                                                                                                       
+    ,{                                                  
+      "title": "CODE FOR FIGURE (archived at Zenodo)",  
+      "url": ""                                         
+    }                                                   
+    ],
+  "project": {
+    "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",
+    "title": "",
+    "description": "",
+    "PI": {
+      "firstname": "",
+      "lastname": ""
+    },
+    "funder": "",
+    "grant_number": ""
+  },
+  "instrument": {
+    "catalogue_url": "",
+    "title": "",
+    "description": ""
+  },
+  "computation": {
+    "catalogue_url": "",
+    "title": "Chapter 3 of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+ "description": " Observed and simulated time series of the anomalies in annual and global mean near-surface air temperature (GSAT).** All anomalies are differences from the 1850–1900 time-mean of each individual time series. The reference period 1850–1900 is indicated by grey shading. (a) Single simulations from CMIP6 models (thin lines) and the multi-model mean (thick red line). Observational data (thick black lines) are Met Office Hadley Centre observations datasets (HadCRUT5), and are blended surface temperature (2 m air temperature over land and sea surface temperature over the ocean). All models have been subsampled using the HadCRUT5 observational data mask. Vertical lines indicate large historical volcanic eruptions. CMIP6 models which are marked with an asterisk are either tuned to reproduce observed warming directly, or indirectly by tuning equilibrium climate sensitivity. Inset: GSAT for each model over the reference period, not masked to any observations. (b) Multi-model means of CMIP5 (blue line) and CMIP6 (red line) ensembles and associated 5th to 95th percentile ranges (shaded regions). Observational data are HadCRUT5, Berkeley Earth, National Oceanic and Atmospheric Administration NOAAGlobalTemp-Interim and Kadow et al. (2020). Masking was done as in (a). []{#_Hlk66010908 .anchor}CMIP6 historical simulations are extended with SSP2-4.5 simulations for the period 2015–2020 and CMIP5 simulations are extended with RCP4.5 simulations for the period 2006–2020. All available ensemble members were used (see Section 3.2). The multi-model means and percentiles were calculated solely from simulations available for the whole time span (1850–2020). Figure is updated from Bock et al. (2020), their Figures 1 and 2. / CC BY4.0 <https://creativecommons.org/licenses/by/4.0/>. Further details on data sources and processing are available in the chapter data table (Table 3.SM.1). "
+  }
+}
