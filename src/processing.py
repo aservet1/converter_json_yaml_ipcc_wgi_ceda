@@ -11,6 +11,35 @@ def debuglog(*args):
 	if verbose:
 		print('>>',''.join(args))
 
+def read_lines_conditionally(fp,form_data):
+	lines = []
+	for line in fp:
+		if ("$$(CONDITION_1)$$" in line):
+			if (
+				form_data['field_ds_detailed_info'].strip() != ''
+				or form_data['field_ds_input_dataset_excel'].strip() == "Use chapter data tables"
+			):
+				lines.append(line.replace('$$(CONDITION_1)$$',''))
+
+		elif ("$$(CONDITION_2)$$" in line):
+			if (
+				form_data['field_ds_code_archival'].strip() == "Yes"
+			): lines.append(line.replace('$$(CONDITION_2)$$',''))
+
+		elif ("$$(CONDITION_3)$$" in line):			
+			if (
+				len(form_data['field_ds_subpanel_information'].strip()) != 0 
+			): lines.append(line.replace('$$(CONDITION_3)$$',''))
+
+		elif ("$$(CONDITION_4)$$" in line):
+			if (
+				form_data['field_ds_code_archival'] == "Yes"
+			): lines.append(line.replace('$$(CONDITION_4)$$',''))
+
+		else:
+			lines.append(line)
+	return ''.join(lines)
+
 def process_text(text, data):
 	global FORM_DATA
 	FORM_DATA = data['form_data']
@@ -18,7 +47,8 @@ def process_text(text, data):
 	INIT_GLOBALS (
 		data['form_data'],
 		data['chapter_cit'],
-		data['sm_cit']
+		data['sm_cit'],
+		data['input_data_table']
 	)
 
 	text = straightforward_replacements(text)
@@ -52,11 +82,9 @@ def get_replacement(text):
 	key, function_name = info
 	fn = getFn(function_name)
 
-	if not key in FORM_DATA.keys(): # TODO this should never happen, by the time you have all of the data provided
-		print('key not found:',key)
-		return ''
-		#return fn(key)
+	if '$' in key:
+		return fn([FORM_DATA[k] for k in key.split('$')]).replace('\"','\'')
 	else:
-		return fn(FORM_DATA[key])
+		return fn(FORM_DATA[key]).replace('\"','\'')
 
 

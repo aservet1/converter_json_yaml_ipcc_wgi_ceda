@@ -4,7 +4,7 @@ import json
 import yaml
 from sys import argv
 
-from processing import process_text
+from processing import process_text, read_lines_conditionally
 
 def text_file_as_list_of_lines(fname):
 	with open(fname) as fp:
@@ -24,11 +24,13 @@ with open(form_info_file) as fp:
 data = {
 	"form_data": form_data,
 	"chapter_cit": text_file_as_list_of_lines('data/chapter_cit.txt'),
-	"sm_cit": text_file_as_list_of_lines('data/sm_cit.txt')
+	"sm_cit": text_file_as_list_of_lines('data/sm_cit.txt'),
+	'input_data_table': text_file_as_list_of_lines('data/input_data_table.txt')
 }
 
+
 with open('data/metadata.yaml_27_08.txt') as fp:
-	template = fp.read()
+	template = read_lines_conditionally(fp,data['form_data'])
 
 processed = process_text(template, data)
 

@@ -1,5 +1,5 @@
 {
-  "title": "Chapter  ^((field_ds_chapter|extract_chapter_number))> of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure ^((title|extract_figure_number))>",
+  "title": "Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I Contribution to the IPCC Sixth Assessment Report - data for Figure ^((title|extract_figure_number))>",
   "description": "Data for Figure ^((title|extract_figure_number))> from Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6).\n\n
 
   ^((field_ds_1_sentence_description|html_to_raw_text))>\n\n
@@ -15,32 +15,32 @@
   ---------------------------------------------------\n
   The following weblinks are provided in the Related Documents section of this catalogue record:
   - Link to the report component containing the figure (Chapter ^((field_ds_chapter|extract_chapter_number))>)
-  - Link to the Supplementary Material for Chapter [[INSERT CHAPTER NUMBER]], which contains [completar] details on the input data used in Table [INSERT INPUT DATA TABLE NUMBER]]
-  - Link to the code for the figure, archived on Zenodo.
+$$(CONDITION_1)$$  - Link to the Supplementary Material for Chapter ^((field_ds_chapter|extract_chapter_number))>, which contains ^((field_ds_detailed_info|more_detailed_info))>details on the input data used in Table ^((field_ds_input_dataset_excel|input_data_table))>>
+$$(CONDITION_4)$$  - Link to the code for the figure, archived on Zenodo. 
   \n\n
 
-  ---------------------------------------------------\n
-  Figure subpanels\n
-  ---------------------------------------------------\n
-  [Insert Figure subpanels text]\n\n
-
-  ---------------------------------------------------\n
-  List of data provided\n
-  ---------------------------------------------------\n
-  [Insert List of data provided text]\n\n
-
-  ---------------------------------------------------\n
-  Data provided in relation to figure\n
-  ---------------------------------------------------\n
-  [Insert Data provided in relation to figure text]\n\n
+$$(CONDITION_3)$$  ---------------------------------------------------\n
+$$(CONDITION_3)$$  Figure subpanels\n                                   
+$$(CONDITION_3)$$  ---------------------------------------------------\n
+$$(CONDITION_3)$$  ^((field_ds_subpanel_information))>\n\n              
+                                                        
+  ---------------------------------------------------\n 
+  List of data provided\n                               
+  ---------------------------------------------------\n 
+  [Insert List of data provided text]\n\n               
+                                                        
+  ---------------------------------------------------\n 
+  Data provided in relation to figure\n                 
+  ---------------------------------------------------\n 
+  [Insert Data provided in relation to figure text]\n\n 
 
   ",
   "authors": [
     {
       "firstname": "[nombre1]",
       "surname": "[apellido1]"
-    },
-    {
+    }
+    ,{
       "firstname": "[nombre2]",
       "surname": "[apellido2]"
     }
@@ -69,15 +69,15 @@
     {
       "title": "ORIGIN OF FIGURE (IPCC REPORT CHAPTER):  ^((field_ds_chapter|citation_for_chapter))>",
       "url": ""
-    },
-    {
-      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: [TITLE]",
-      "url": "https://www.ipcc.ch/"
-    },
-    {
-      "title": "CODE FOR FIGURE (archived at Zenodo)",
-      "url": ""
     }
+$$(CONDITION_1)$$    ,{                                                                                                      
+$$(CONDITION_1)$$      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: ^((field_ds_chapter|sm_citation_for_chapter))>", 
+$$(CONDITION_1)$$      "url": "https://www.ipcc.ch/"                                                                         
+$$(CONDITION_1)$$    }                                                                                                       
+$$(CONDITION_4)$$    ,{                                                  
+$$(CONDITION_4)$$      "title": "CODE FOR FIGURE (archived at Zenodo)",  
+$$(CONDITION_4)$$      "url": ""                                         
+$$(CONDITION_4)$$    }                                                   
     ],
   "project": {
     "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",
@@ -96,7 +96,8 @@
     "description": ""
   },
   "computation": {
-    "catalogue_url": "", Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
-    "description": "[INSERT CAPTION]"
+    "catalogue_url": "",
+    "title": "Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+    "description": "^((field_ds_chapter$title|extract_fig_info_from_chapter_description))>"
   }
 }
