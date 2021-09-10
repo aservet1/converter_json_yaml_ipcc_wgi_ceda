@@ -1,0 +1,96 @@
+
+an ideal goal:
+	document the ^(())> expression syntax formally
+
+goal: figure out HTML list to text list
+	if it was not nested (I know that it's nested, this is just a first step)
+	``````````````````````````````````````````````````````````````````````
+		text
+		.replace('<ul>','')
+			.replace('</ul>','\n')
+				.replace('<li>',' - ')
+					.replace('</li>','')
+
+		def base_case(listtext):
+			list = re.split (
+				'</li>\s*<li>',
+				listtext
+					.replace('<ul>','')
+						.replace('</ul>','')
+			)
+			list[0] = re.sub (
+				'\s*<li>',
+				'',
+				list[0]
+			)
+			list[-1] = re.sub (
+				'</li>\s*',
+				'',
+				list[-1]
+			)
+			return list
+
+	``````````````````````````````````````````````````````````````````````
+def listoflists_to_stringlist(listoflists, level = 0):
+	s = ""
+	for item in listoflists:
+		if type(item) is list:
+			s += listoflists_to_stringlist(item, level+1)
+		else:
+			s += '\n'+('\t'*level)+'- '+str(item)
+	return s
+
+
+	if it was nested:
+	def recursive_list_build(text, level=0):
+		buffer = ""
+
+		int i = 0;
+		while (i < len(text)):
+
+			if text[i:].startswith("<ul>"):
+				level_down = recursive_list_build(text[i:], level+1)
+				i += len(level_down)
+
+			elif text[i:].startswith("</ul>"):
+				return text[:i+len("</ul>")]
+					.replace('<ul>','')
+						.replace('</ul>','\n')
+							.replace('</li>','')
+								.replace('<li>',('\t'*level)+'- ')
+			else:
+				buffer += text[i]
+				i += 1
+
+
+	def recursive_list_build_better(text, level=0):
+		lists = []
+
+		int i = 0;
+		while (i < len(text)):
+
+			if text[i:].startswith("<ul>"):
+				level_down, length_captured = recursive_list_build(text[i:], level+1)
+				i += length_captured
+				lists.append(level_down)
+
+			elif text[i:].startswith("</ul>"):
+				return text[:i+len("</ul>")]
+					.replace('<ul>','')
+						.replace('</ul>','\n')
+							.replace('</li>','')
+								.replace('<li>',('\t'*level)+'- ')
+					, len(text[:i+len("</ul>")])
+			else:
+				buffer += text[i]
+				i += 1
+
+"<ul>
+	<li>hi</li>
+	<li>hey</li>
+	<li>hello</li>
+	<li>alsdalksjdlaksjasdd</li>
+</ul>".replace('<ul>').replace('</ul>').split()
+
+
+
