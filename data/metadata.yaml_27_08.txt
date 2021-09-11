@@ -15,14 +15,14 @@
   ---------------------------------------------------\n
   The following weblinks are provided in the Related Documents section of this catalogue record:
   - Link to the report component containing the figure (Chapter ^((field_ds_chapter|extract_chapter_number))>)
-$$(CONDITION_1)$$  - Link to the Supplementary Material for Chapter ^((field_ds_chapter|extract_chapter_number))>, which contains ^((field_ds_detailed_info|more_detailed_info))>details on the input data used in Table ^((field_ds_input_dataset_excel|input_data_table))>>
-$$(CONDITION_4)$$  - Link to the code for the figure, archived on Zenodo. 
+(*C1-)  - Link to the Supplementary Material for Chapter ^((field_ds_chapter|extract_chapter_number))>, which contains ^((field_ds_detailed_info|more_detailed_info))>details on the input data used in Table ^((field_ds_input_dataset_excel|input_data_table))>>
+(*C2-)  - Link to the code for the figure, archived on Zenodo. 
   \n\n
 
-$$(CONDITION_3)$$  ---------------------------------------------------\n
-$$(CONDITION_3)$$  Figure subpanels\n                                   
-$$(CONDITION_3)$$  ---------------------------------------------------\n
-$$(CONDITION_3)$$  ^((field_ds_subpanel_information))>\n\n              
+(*C3-)  ---------------------------------------------------\n
+(*C3-)  Figure subpanels\n                                   
+(*C3-)  ---------------------------------------------------\n
+(*C3-)  ^((field_ds_subpanel_information))>\n\n              
                                                         
   ---------------------------------------------------\n 
   List of data provided\n                               
@@ -70,14 +70,14 @@ $$(CONDITION_3)$$  ^((field_ds_subpanel_information))>\n\n
       "title": "ORIGIN OF FIGURE (IPCC REPORT CHAPTER):  ^((field_ds_chapter|citation_for_chapter))>",
       "url": ""
     }
-$$(CONDITION_1)$$    ,{                                                                                                      
-$$(CONDITION_1)$$      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: ^((field_ds_chapter|sm_citation_for_chapter))>", 
-$$(CONDITION_1)$$      "url": "https://www.ipcc.ch/"                                                                         
-$$(CONDITION_1)$$    }                                                                                                       
-$$(CONDITION_4)$$    ,{                                                  
-$$(CONDITION_4)$$      "title": "CODE FOR FIGURE (archived at Zenodo)",  
-$$(CONDITION_4)$$      "url": ""                                         
-$$(CONDITION_4)$$    }                                                   
+(*C1-)    ,{                                                                                                      
+(*C1-)      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: ^((field_ds_chapter|sm_citation_for_chapter))>", 
+(*C1-)      "url": "https://www.ipcc.ch/"                                                                         
+(*C1-)    }                                                                                                       
+(*C3-)    ,{                                                  
+(*C3-)      "title": "CODE FOR FIGURE (archived at Zenodo)",  
+(*C3-)      "url": ""                                         
+(*C3-)    }                                                   
     ],
   "project": {
     "catalogue_url": "https://catalogue.ceda.ac.uk/uuid/3234e9111d4f4354af00c3aaecd879b7%E2%80%99",

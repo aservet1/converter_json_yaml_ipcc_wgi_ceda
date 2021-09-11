@@ -14,27 +14,27 @@ def debuglog(*args):
 def read_lines_conditionally(fp,form_data):
 	lines = []
 	for line in fp:
-		if ("$$(CONDITION_1)$$" in line):
+		if ("(*C1-)" in line):
 			if (
 				form_data['field_ds_detailed_info'].strip() != ''
 				or form_data['field_ds_input_dataset_excel'].strip() == "Use chapter data tables"
 			):
-				lines.append(line.replace('$$(CONDITION_1)$$',''))
+				lines.append(line.replace('(*C1-)',''))
 
-		elif ("$$(CONDITION_2)$$" in line):
+		elif ("(*C2-)" in line):
 			if (
 				form_data['field_ds_code_archival'].strip() == "Yes"
-			): lines.append(line.replace('$$(CONDITION_2)$$',''))
+			): lines.append(line.replace('(*C2-)',''))
 
-		elif ("$$(CONDITION_3)$$" in line):			
+		elif ("(*C3-)" in line):			
 			if (
 				len(form_data['field_ds_subpanel_information'].strip()) != 0 
-			): lines.append(line.replace('$$(CONDITION_3)$$',''))
+			): lines.append(line.replace('(*C3-)',''))
 
-		elif ("$$(CONDITION_4)$$" in line):
-			if (
-				form_data['field_ds_code_archival'] == "Yes"
-			): lines.append(line.replace('$$(CONDITION_4)$$',''))
+		# elif ("(*C4-)" in line):
+		# 	if (
+		# 		form_data['field_ds_code_archival'] == "Yes"
+		# 	): lines.append(line.replace('(*C4-)',''))
 
 		else:
 			lines.append(line)
