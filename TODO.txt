@@ -1,3 +1,0 @@
-INSERT CAPTION -- JSON field name will be specified later, make sure to pick that part up when you have that info
-
-find out how to succinctly write out the rules for the conditional text building thingy
