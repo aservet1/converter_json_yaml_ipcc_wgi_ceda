@@ -1,3 +1,4 @@
+import json
 from bs4 import BeautifulSoup
 
 CHAPTER_CIT = []
@@ -83,3 +84,23 @@ def extract_fig_info_from_chapter_description(chapter_fig):
 				lines.append(line)
     
 	return ''.join(lines)
+
+def author_firstnames_surnames(text):
+	soup = BeautifulSoup(text, 'html.parser')
+	lines = [
+		line for line in [
+			line.strip() for line in soup.get_text().split('\n')
+		] if len(line)
+	]
+	firstnames = [ lines[i+1] for i in range(len(lines)) if lines[i] == 'First Name']
+	surnames   = [ lines[i+1] for i in range(len(lines)) if lines[i] == 'Last Name' ]
+	assert(len(firstnames)==len(surnames))
+	authors = [
+		{
+			'firstname': firstnames[i],
+			'surname':   surnames[i]
+		}
+		for i in range(len(firstnames))
+	]
+	return '\n  '.join(json.dumps(authors,indent=2).split('\n'))
+

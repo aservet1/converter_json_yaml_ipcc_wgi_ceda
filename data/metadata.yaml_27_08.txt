@@ -35,16 +35,16 @@
   [Insert Data provided in relation to figure text]\n\n 
 
   ",
-  "authors": [
-    {
-      "firstname": "[nombre1]",
-      "surname": "[apellido1]"
-    }
-    ,{
-      "firstname": "[nombre2]",
-      "surname": "[apellido2]"
-    }
-  ],
+  "authors": ^((field_ds_authors|author_firstnames_surnames))> ,
+
+
+
+
+
+
+
+
+
   "bbox": {
     "north": "^((field_ds_sc_north))>",
     "south": "^((field_ds_sc_south))>",
