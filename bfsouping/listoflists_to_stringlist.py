@@ -1,38 +1,117 @@
 import re
 from bs4 import BeautifulSoup
 
-def listoflists_to_textlist(listoflists, level = 0):
-	s = ""
-	for item in listoflists:
-		if type(item) is list:
-			s += listoflists_to_textlist(item, level+1) + '\n'
-		else:
-			s += '\n'+('\t'*level)+'- '+str(item)
-	if level == 0:
-		return s[1:]
-	else:
-		return s
+def htmllist_to_textlist(htmllist):
+	def get_single_key(dct):   return list(dct.keys())[0]
+	def get_single_value(dct): return list(dct.values())[0]
 
-def htmllist_to_listoflists(text):
-	def find_li(element):
-		return [{li: find_li(li)}
-				for ul in element('ul', recursive=False)
-				for li in ul('li', recursive=False)]
+	def parsedlist_to_plaintextlist(parsedlist, level = 0):
+		BULLET = ('\t'*level)+'- '
+		text = str()
+		for item in parsedlist:
+			if type(item) is dict:
+				text += (
+					BULLET + get_single_key(item) + '\n' +
+					parsedlist_to_plaintextlist (
+						get_single_value(item),
+						level+1
+					)
+				)
+			else:
+				text += BULLET + str(item) + '\n'
+		return text
 
-	soup = BeautifulSoup(text, 'html.parser')
-	return find_li(soup)
+	def parse_nested_html_list(text):
+		def strip_list_content_and_tags(item):
+			item = str(item)
+			if '\n' in item:
+				item = ' '.join(item.split('\n'))
+			item = re.sub('<ul>.*</ul>','',item)
+			item = item.replace('<li>','').replace('</li>','')
+			return item.strip()
 
-# def htmllist_to_listoflists(htmllist, level = 0):
-# 	def base_case(listtext):
-# 		lst = re.split (
-# 			'</li>\s*<li>',
-# 			listtext
-# 				.replace('<ul>','')
-# 					.replace('</ul>','')
-# 		)
-# 		lst[0]  = re.sub ( '\s*<li>',  '', lst[0]  )
-# 		lst[-1] = re.sub ( '</li>\s*', '', lst[-1] )
-# 		return lst
+		def find_li(element):
+			return [
+				{li: find_li(li)}
+					for ul in element('ul', recursive=False)
+					for li in ul('li', recursive=False)
+			] # source: https://stackoverflow.com/questions/24216263/converting-html-list-to-nested-python-list
+
+		def post_processing_find_li_dict_instance(x):
+			if not len(get_single_value(x)):
+				return strip_list_content_and_tags(get_single_key(x))
+			else:
+				title = strip_list_content_and_tags(get_single_key(x))
+				processed = {title:[]}
+				for item in get_single_value(x):
+					processed[title].append(post_processing_find_li_dict_instance(item))
+				return processed
+
+		soup = BeautifulSoup(text, 'html.parser')
+		processed = []
+		for item in find_li(soup):
+			processed_item = post_processing_find_li_dict_instance(item)
+			if type(processed_item) is list:
+				processed.extend(processed_item)
+			else:
+				processed.append(processed_item)
+		return processed
+
+	return (
+		parsedlist_to_plaintextlist (
+			parse_nested_html_list (
+				htmllist
+			)
+		)
+	)
+
+
+
+# listtext = \
+# """
+# <ul>
+#     <li>List item one</li>
+#     <li>Title
+#         <ul>
+#             <li>Subitem 1</li>
+#             <li>Subitem 2</li>
+#         </ul>
+#     </li>
+#     <li>Final list item</li>
+# </ul>
+# """
+
+listtext = """
+<ul>
+  <li>Morning Kumquat Delicacies
+  <ul>
+    <li>Hot Dishes
+    <ul>
+      <li>Kumquat omelet</li>
+      <li>Kumquat waffles
+      <ul>
+        <li>Country style</li>
+        <li>Belgian</li>
+      </ul>
+      </li>
+      <li>Kumquats and toast</li>
+     </ul>
+    </li>
+    <li>Cold Dishes
+    <ul>
+      <li>Kumquats and cornflakes</li>
+      <li>Pickled Kumquats</li>
+      <li>Diced Kumquats</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+"""
+
+# parsed = parse_nested_html_list(listtext)
+# textlist = parsedlist_to_plaintextlist(parsed)
+print(htmllist_to_textlist(listtext))
 
 # 	listoflists = []
 # 	i = 0
@@ -52,33 +131,3 @@ def htmllist_to_listoflists(text):
 # 		return listoflists
 # 	else:
 # 		return len(htmllist), listoflists
-
-listtext = """<ul>
-    <li>List item one</li>
-    <li>List item two with subitems:
-        <ul>
-            <li>Subitem 1</li>
-            <li>Subitem 2</li>
-        </ul>
-    </li>
-    <li>Final list item</li>
-</ul>"""
-print(
-	#listoflists_to_textlist(
-		htmllist_to_listoflists(
-			listtext
-		)
-	#)
-)
-
-# print(
-# 	listoflists_to_stringlist (
-# 		[1,
-# 			[2, 3, 4],
-# 			[1,
-# 				[0,0,0],
-# 			7],
-# 			9
-# 		,5]
-# 	)
-# )
