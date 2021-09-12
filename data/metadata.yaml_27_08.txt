@@ -36,7 +36,7 @@
 
   ",
   "authors": ^((field_ds_authors|author_firstnames_surnames))> ,
-
+  # todo: saca estas lineas vacias (ahora los tengo para mantener los numeros de linea idicados por Lina)
 
 
 
