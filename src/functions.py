@@ -58,7 +58,6 @@ def more_detailed_info(field_ds_detailed_info):
 	else:
 		return ''
 
-
 # exaple expected input: <time datetime="1979-01-01T12:00:00Z" class="datetime">Mon, 01/01/1979 - 12:00</time>
 #   extract datetime attribute
 def get_datetime_attribute_from_time_tags(text):
