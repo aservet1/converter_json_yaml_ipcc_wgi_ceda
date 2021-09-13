@@ -1,3 +1,4 @@
+import re
 import json
 from bs4 import BeautifulSoup
 
@@ -104,3 +105,105 @@ def author_firstnames_surnames(text):
 	]
 	return '\n  '.join(json.dumps(authors,indent=2).split('\n'))
 
+# esta funcion era un lio para hacer.......jajajajajaj
+def html_data_to_text(html):
+	def htmllist_to_textlist(htmllist):
+		def get_single_key(dct):   return list(dct.keys())[0]
+		def get_single_value(dct): return list(dct.values())[0]
+
+		def parsedlist_to_plaintextlist(parsedlist, level = 0):
+			BULLET = ('\t'*level)+'- '
+			text = str()
+			for item in parsedlist:
+				if type(item) is dict:
+					text += (
+						BULLET + get_single_key(item) + '\n' +
+						parsedlist_to_plaintextlist (
+							get_single_value(item),
+							level+1
+						)
+					)
+				else:
+					text += BULLET + str(item) + '\n'
+			return text
+
+		def parse_nested_html_list(text):
+			def strip_list_content_and_tags(item):
+				item = str(item)
+				if '\n' in item:
+					item = ' '.join(item.split('\n'))
+				item = re.sub('<ul>.*</ul>','',item)
+				item = item.replace('<li>','').replace('</li>','')
+				return item.strip()
+
+			def find_li(element):
+				return [
+					{li: find_li(li)}
+						for ul in element('ul', recursive=False)
+						for li in ul('li', recursive=False)
+				] # source: https://stackoverflow.com/questions/24216263/converting-html-list-to-nested-python-list
+
+			def post_processing_find_li_dict_instance(x):
+				if not len(get_single_value(x)):
+					return strip_list_content_and_tags(get_single_key(x))
+				else:
+					title = strip_list_content_and_tags(get_single_key(x))
+					processed = {title:[]}
+					for item in get_single_value(x):
+						processed[title].append(post_processing_find_li_dict_instance(item))
+					return processed
+
+			soup = BeautifulSoup(text, 'html.parser')
+			processed = []
+			for item in find_li(soup):
+				processed_item = post_processing_find_li_dict_instance(item)
+				if type(processed_item) is list:
+					processed.extend(processed_item)
+				else:
+					processed.append(processed_item)
+			return processed
+
+		return (
+			parsedlist_to_plaintextlist (
+				parse_nested_html_list (
+					htmllist
+				)
+			)
+		)
+
+	def get_list_part_of_html(html):
+		start_idx = 0
+		stop_idx  = len(html)
+
+		opener = '<ul>'
+		closer = '</ul>'
+
+		while (
+			start_idx < stop_idx
+				and
+			not html[start_idx:start_idx+len(opener)] == opener
+		): start_idx += 1
+		while (
+			stop_idx  > start_idx
+				and
+			not html[stop_idx-len(closer):stop_idx] == closer
+		): stop_idx  -= 1
+
+		return html[start_idx:stop_idx]
+	
+	listpart = get_list_part_of_html(html)
+	processed = (
+		BeautifulSoup(
+			html.replace(
+				listpart,
+				htmllist_to_textlist(listpart)
+			),
+			'html.parser'
+		).get_text()
+			.strip()
+	)
+	return '  ' + '\n  '.join(
+		'\\n\n'.join(
+			processed.split('\n')
+		).split('\n')
+	)	.strip()

@@ -27,12 +27,12 @@
   ---------------------------------------------------\n 
   List of data provided\n                               
   ---------------------------------------------------\n 
-  [Insert List of data provided text]\n\n               
+^((field_ds_data_list|html_data_to_text))>\n\n
                                                         
   ---------------------------------------------------\n 
   Data provided in relation to figure\n                 
   ---------------------------------------------------\n 
-  [Insert Data provided in relation to figure text]\n\n 
+^((field_ds_description|html_data_to_text))>\n\n 
 
   ",
   "authors": ^((field_ds_authors|author_firstnames_surnames))> ,
