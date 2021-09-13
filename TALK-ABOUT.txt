@@ -8,7 +8,7 @@ examples/Fig_3.19.json: field_ds_code_archival":"Yes"
 examples/Fig_3.23.json: field_ds_code_archival":"Yes"
 examples/Fig_3.31.json: field_ds_code_archival":"Yes"
 examples/Fig_3.32.json: field_ds_code_archival":"Yes"
-examples/Fig_3.38.json: field_ds_code_archival":""
+examples/Fig_3.38.json: field_ds_code_archival":""  <-- Puse mal los condicionales. El Fig_3.38.json que te di esta mal
 examples/Fig_3.3.json:  field_ds_code_archival":"Yes"
 examples/Fig_3.41.json: field_ds_code_archival":"Yes"
 examples/Fig_3.42.json: field_ds_code_archival":"Yes"
@@ -16,3 +16,7 @@ examples/Fig_3.43.json: field_ds_code_archival":"Yes"
 examples/Fig_3.4.json:  field_ds_code_archival":"Yes"
 examples/Fig_3.5.json:  field_ds_code_archival":"Yes"
 examples/Fig_3.9.json:  field_ds_code_archival":"Yes"
+
+line 50 de metadata.yaml_27_08.txt: tengo que meter algo? no veo nada en tus comentarios
+
+Figure subpanels: tengo que sacar lo del HTML?
