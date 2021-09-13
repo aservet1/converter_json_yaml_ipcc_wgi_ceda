@@ -1,0 +1,6 @@
+read the figure text directly from docx
+
+post process all strings to turn \u codes into unicode characters
+
+read the docx text in unicode or \u codes, so it feeds easily into the post processing
+and the docx text can work seamlessly into the yaml file
