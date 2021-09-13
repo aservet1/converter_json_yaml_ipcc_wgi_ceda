@@ -26,13 +26,14 @@ def read_lines_conditionally(fp,form_data):
 				form_data['field_ds_code_archival'].strip() == "Yes"
 			): lines.append(line.replace('(*C2-)',''))
 
-		elif ("(*C3-)" in line):			
+		elif ("(*C3-)" in line):
 			if (
-				len(form_data['field_ds_subpanel_information'].strip()) != 0 
+				len(form_data['field_ds_subpanel_information'].strip()) != 0
 			): lines.append(line.replace('(*C3-)',''))
 
 		else:
 			lines.append(line)
+
 	return ''.join(lines)
 
 def process_text(text, data):
