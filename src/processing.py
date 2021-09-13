@@ -51,13 +51,19 @@ def process_text(text, data):
 	return text
 
 def straightforward_replacements(text):
+	def post_process_replacement_text(text):
+		# todo: turn \u codes into unicode characters
+		return text.repalce('\"','\'')
+
 	pattern = re.escape(OPENER) + f'[^{CLOSER[0]}]*' + re.escape(CLOSER)
 	regex = re.compile(pattern)
 
 	match = regex.search(text)
 	while (match):
 		data = match.group()
-		repl = get_replacement(data.replace(OPENER,'').replace(CLOSER,''))
+		repl = post_process_replacement_text(
+			get_replacement(data.replace(OPENER,'').replace(CLOSER,''))
+		)
 		text = text.replace(data,repl)
 		match = regex.search(text)
 
@@ -79,8 +85,8 @@ def get_replacement(text):
 	fn = getFn(function_name)
 
 	if '$' in key:
-		return fn([FORM_DATA[k] for k in key.split('$')]).replace('\"','\'')
+		return fn([FORM_DATA[k] for k in key.split('$')])
 	else:
-		return fn(FORM_DATA[key]).replace('\"','\'')
+		return fn(FORM_DATA[key])
 
 
