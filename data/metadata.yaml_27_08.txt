@@ -36,15 +36,6 @@
 
   ",
   "authors": ^((field_ds_authors|author_firstnames_surnames))> ,
-  # todo: saca estas lineas vacias (ahora los tengo para mantener los numeros de linea idicados por Lina)
-
-
-
-
-
-
-
-
   "bbox": {
     "north": "^((field_ds_sc_north))>",
     "south": "^((field_ds_sc_south))>",
