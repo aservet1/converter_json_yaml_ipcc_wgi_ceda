@@ -22,8 +22,8 @@
 (*C3-)  ---------------------------------------------------\n
 (*C3-)  Figure subpanels\n                                   
 (*C3-)  ---------------------------------------------------\n
-(*C3-)  ^((field_ds_subpanel_information))>\n\n              
-(*C3-)
+(*C3-)  ^((field_ds_subpanel_information|html_to_raw_text))>\n\n
+
   ---------------------------------------------------\n 
   List of data provided\n                               
   ---------------------------------------------------\n 
@@ -47,7 +47,7 @@
     "lowest_level_bound": "^((field_ds_ve_lowest))>",
     "units": "^((field_ds_hr))>"
    },
-  "resolution":"[INSERT Horizontal resolution] [INSERT Unit of Horizontal Resolution]",
+  "resolution":"^((field_ds_hr))> ^((field_ds_hr_unit))>",
   "time_range": {
     "start": "^((field_ds_tr_start_date|get_datetime_attribute_from_time_tags))>",
     "end": "^((field_ds_tr_end_date|get_datetime_attribute_from_time_tags))>"
@@ -64,7 +64,7 @@
 (*C1-)    ,{                                                                                                      
 (*C1-)      "title": "SUPPLEMENTARY MATERIAL FOR REPORT CHAPTER: ^((field_ds_chapter|sm_citation_for_chapter))>", 
 (*C1-)      "url": "https://www.ipcc.ch/"                                                                         
-(*C1-)    }                                                                                                       
+(*C1-)    }
 (*C2-)    ,{                                                  
 (*C2-)      "title": "CODE FOR FIGURE (archived at Zenodo)",  
 (*C2-)      "url": ""                                         

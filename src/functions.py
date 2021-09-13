@@ -13,11 +13,14 @@ def INIT_GLOBALS(form_data, chapter_cit, sm_cit, input_data_table):
 	global SM_CIT      ; SM_CIT      = sm_cit
 	global INPUT_DATA_TABLE;	INPUT_DATA_TABLE = input_data_table
 
+def html_to_raw_text(html):
+	return BeautifulSoup(html,"html.parser").get_text()
+
 def extract_figure_number(text):
 	return text.replace('Figure','').strip()
 
-def html_list_to_text_list(text):
-	return 'some BeautifulSoup parsing thing'
+# def html_list_to_text_list(text):
+# 	return 'some BeautifulSoup parsing thing'
 
 def extract_chapter_number(text): # format: 'Chapter N: XXXX', extracting N
 	return ''.join([ c for c in text.split(':')[0] if c.isdigit() ]).strip()
@@ -45,11 +48,11 @@ def input_data_table(field_ds_input_dataset_excel):
 		)
 		return INPUT_DATA_TABLE[chapter_num - 1]
 
-def extract_section_number(text):
-	return "TO-IMPLEMENT: extract_section_number"
+# def extract_section_number(text):
+# 	return "TO-IMPLEMENT: extract_section_number"
 
-def get_author_names(text):
-	return "[ {\"TO-IMPLEMENT\": \"get_author_names\"} ]"
+# def get_author_names(text):
+# 	return "[ {\"TO-IMPLEMENT\": \"get_author_names\"} ]"
 
 def html_to_raw_text(text):
 	return BeautifulSoup(text, "html.parser").get_text()
@@ -65,9 +68,9 @@ def more_detailed_info(field_ds_detailed_info):
 def get_datetime_attribute_from_time_tags(text):
 	return BeautifulSoup(text, "html.parser").find('time')['datetime']
 
-def extract_fig_info_from_chapter_description(chapter_fig):
-	chapter = extract_chapter_number(chapter_fig[0]).strip()
-	fig = extract_figure_number(chapter_fig[1]).strip()
+def extract_fig_info_from_chapter_description(chapter_fig_arg_list):
+	chapter = extract_chapter_number(chapter_fig_arg_list[0]).strip()
+	fig = extract_figure_number(chapter_fig_arg_list[1]).strip()
 	fname = 'data/Chapter_Text/Chapter'+str(chapter)+'.txt'
 	lines = []
 	with open (fname) as fp:
