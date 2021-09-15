@@ -79,7 +79,20 @@ def more_detailed_info(field_ds_detailed_info):
 def get_datetime_attribute_from_time_tags(text):
 	return BeautifulSoup(text, "html.parser").find('time')['datetime']
 
+docx_cache = {}
 def extract_fig_info_from_chapter_description(arg1chapter_arg2fig_list):
+	def get_docx_text(filename):
+		if filename not in docx_cache.keys():
+			docx_cache[filename] = '\n'.join(
+				[
+					paragraph.text
+					for paragraph in
+						docx.Document(
+							filename
+						).paragraphs
+				]
+			).split('\n')
+		return docx_cache[filename]
 
 	def zeropad(number_string):
 		if len(number_string) == 1:
@@ -94,17 +107,8 @@ def extract_fig_info_from_chapter_description(arg1chapter_arg2fig_list):
 	appending = False
 
 	lines = []
-	for line in '\n'.join(
-		[
-			paragraph.text
-			for paragraph in
-				docx.Document (
-					'data/Chapter_Text/Chapter '
-					+ zeropad(chapter)
-					+ ' Text..docx'
-				).paragraphs
-		]
-	).split('\n'):
+
+	for line in get_docx_text('data/Chapter_Text/Chapter '+ zeropad(chapter) +' Text..docx'):
 		if startline in line:
 			appending = True
 			continue
