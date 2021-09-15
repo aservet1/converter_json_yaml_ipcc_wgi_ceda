@@ -1,5 +1,4 @@
 import re
-import codecs
 
 OPENER = '^(('; CLOSER = '))>';
 FORM_DATA = {}
@@ -51,33 +50,10 @@ def process_text(text, data):
 	return text
 
 def straightforward_replacements(text):
-	def post_process_replacement_text(text):
-		# text = re.sub(
-		# 	'\\u00e9','XX',
-		# 	# lambda match:
-		# 	# 	chr(ord(
-		# 	# 		codecs.decode(
-		# 	# 			match.group(),'unicode-escape'
-		# 	# 		)
-		# 	# 	)),
-		# 	text
-		# )
 
-		# # pattern = re.escape(pattern)
-		# print('"',pattern,'"')
-		# regex = re.compile(pattern)
-		# match = regex.search(text)
-		# print(match)
-		# while (match):
-		# 	data = match.group()
-		# 	text = text.replace (
-		# 		data,
-		# 		chr(ord(
-		# 			codecs.decode(data, 'unicode-escape')
-		# 		))
-		# 	)
-		# 	match = regex.search(text)
+	def post_process_replacement_text(text):
 		text = text.replace('\"','\'')
+		# text = text.strip()
 		return text
 
 	pattern = re.escape(OPENER) + f'[^{CLOSER[0]}]*' + re.escape(CLOSER)

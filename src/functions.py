@@ -1,5 +1,7 @@
 import re
+import docx
 import json
+import codecs
 from bs4 import BeautifulSoup
 
 CHAPTER_CIT = []
@@ -13,8 +15,15 @@ def INIT_GLOBALS(form_data, chapter_cit, sm_cit, input_data_table):
 	global SM_CIT      ; SM_CIT      = sm_cit
 	global INPUT_DATA_TABLE;	INPUT_DATA_TABLE = input_data_table
 
+def decodescapes(text):
+	return codecs.decode(
+		text, 'unicode-escape'
+	)
+
 def html_to_raw_text(html):
-	return BeautifulSoup(html,"html.parser").get_text()
+	return decodescapes (
+		BeautifulSoup(html,"html.parser").get_text()
+	)
 
 def extract_figure_number(text):
 	return text.replace('Figure','').strip()
@@ -55,7 +64,9 @@ def input_data_table(field_ds_input_dataset_excel):
 # 	return "[ {\"TO-IMPLEMENT\": \"get_author_names\"} ]"
 
 def html_to_raw_text(text):
-	return BeautifulSoup(text, "html.parser").get_text()
+	return decodescapes (
+		BeautifulSoup(text, "html.parser").get_text()
+	)
 
 def more_detailed_info(field_ds_detailed_info):
 	if len(field_ds_detailed_info.strip()):
@@ -68,26 +79,42 @@ def more_detailed_info(field_ds_detailed_info):
 def get_datetime_attribute_from_time_tags(text):
 	return BeautifulSoup(text, "html.parser").find('time')['datetime']
 
-def extract_fig_info_from_chapter_description(chapter_fig_arg_list):
-	chapter = extract_chapter_number(chapter_fig_arg_list[0]).strip()
-	fig = extract_figure_number(chapter_fig_arg_list[1]).strip()
-	fname = 'data/Chapter_Text/Chapter'+str(chapter)+'.txt'
+def extract_fig_info_from_chapter_description(arg1chapter_arg2fig_list):
+
+	def zeropad(number_string):
+		if len(number_string) == 1:
+			number_string = '0' + number_string
+		return number_string
+
+	chapter = extract_chapter_number(arg1chapter_arg2fig_list[0]).strip()
+	fig = extract_figure_number(arg1chapter_arg2fig_list[1]).strip()
+
+	startline = "START FIGURE "+str(fig)+" HERE"
+	stopline  = "END FIGURE "+str(fig)+" HERE"
+	appending = False
+
 	lines = []
-	with open (fname) as fp:
-		startline = "START FIGURE "+str(fig)+" HERE"
-		stopline  = "END FIGURE "+str(fig)+" HERE"
-		appending = False
-		for line in fp:
-			if startline in line:
-				appending = True
-				continue
-			if stopline in line:
-				appending = False
-				continue
-			if appending:
-				lines.append(line)
+	for line in '\n'.join(
+		[
+			paragraph.text
+			for paragraph in
+				docx.Document (
+					'data/Chapter_Text/Chapter '
+					+ zeropad(chapter)
+					+ ' Text..docx'
+				).paragraphs
+		]
+	).split('\n'):
+		if startline in line:
+			appending = True
+			continue
+		if stopline in line:
+			appending = False
+			continue
+		if appending:
+			lines.append(line)
     
-	return ''.join(lines)
+	return '\n'.join(lines).strip()
 
 def author_firstnames_surnames(text):
 	soup = BeautifulSoup(text, 'html.parser')
@@ -106,7 +133,13 @@ def author_firstnames_surnames(text):
 		}
 		for i in range(len(firstnames))
 	]
-	return '\n  '.join(json.dumps(authors,indent=2).split('\n'))
+	return decodescapes(
+		'\n  '.join(
+			json.dumps(
+				authors, indent=2
+			).split('\n')
+		)
+	)
 
 # esta funcion era un lio para hacer.......jajajajajaj
 def html_data_to_text(html):
@@ -209,4 +242,4 @@ def html_data_to_text(html):
 		'\\n\n'.join(
 			processed.split('\n')
 		).split('\n')
-	)	.strip()
+	).strip()
