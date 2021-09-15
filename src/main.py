@@ -11,6 +11,9 @@ def text_file_as_list_of_lines(fname):
 		lines = [ line.strip() for line in fp.readlines() ]
 	return lines
 
+def yaml_validate(data):
+	return yaml.safe_load(yaml.dump(data))
+
 try:
 	form_info_file = argv[1]
 	output_file = argv[2]
@@ -33,6 +36,8 @@ with open('data/metadata.yaml_27_08.txt') as fp:
 	template = read_lines_conditionally(fp,data['form_data'])
 
 processed = process_text(template, data)
+processed = yaml_validate(processed)
 
-with open(output_file,'w') as fp:
-	fp.write(yaml.safe_load(yaml.dump(processed)))
+with open(output_file,'w',encoding='utf-8') as fp:
+	fp.write(processed)
+	# fp.write(str(processed))
