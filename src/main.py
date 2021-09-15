@@ -34,10 +34,12 @@ data = {
 	'input_data_table': text_file_as_list_of_lines('data/input_data_table.txt')
 }
 
+
+print(colors.GRN,"procesand files en folder '"+forms_dir+"'",colors.RESET)
 form_info_files = sorted([ fil for fil in os.listdir(forms_dir) if fil.endswith('.json') ])
 
 for form_info_file in form_info_files:
-	print(colors.BLU,' ~) empezando a procesar',form_info_file,'...',colors.RESET)
+	print(colors.BLU,' ~) procesando',form_info_file,'...',colors.RESET)
 
 	with open(os.path.join(forms_dir,form_info_file)) as fp:
 		form_data = json.load(fp)[0] # el JSON siempre va a ser una lista con un elemento?
@@ -61,3 +63,4 @@ for form_info_file in form_info_files:
 	with open(output_file,'w',encoding='utf-8') as fp:
 		fp.write(processed)
 
+print(colors.GRN,"resultados escrito a folder '"+output_dir+"'",colors.RESET)

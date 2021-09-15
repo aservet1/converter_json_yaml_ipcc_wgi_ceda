@@ -24,7 +24,7 @@ if [[ -z $1 ]] || [[ -z $2 ]] ; then
 fi
 
 # - La forma que este script functiona es que junta todo los files .json en el
-# - primer folder y los pasa por mi programa, poniendo  el resultado en el segundo
+# - primer folder y los pasa por mi programa, poniendo el resultado en el segundo
 # - folder. Si no existe el segundo folder, lo crea
 
 src=$1; dest=$2
@@ -34,15 +34,5 @@ if [ ! -d $src ]; then
 	exit 1
 fi
 
-mkdir -p $dest
-printf "${GRN}empezando a procesar files en '$src'${RESET}\n"
-for file in $(find $src | grep '\.json' | sort); do
-	printf "${BLU} >> procesando $file...${RESET}\n"
-
-	outfile="$dest/${file/$src/}"; outfile=${outfile/.json/\/metadata.yml}
-	outdir=${outfile/\metadata.yml/}; mkdir -p $outdir
-
-	python3 src/main.py $file $outfile
-done
-printf "${GRN}resultados escrito a folder '$dest'${RESET}\n"
+python3 src/main.py $src $dest
 
