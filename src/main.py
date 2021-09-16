@@ -58,7 +58,7 @@ for form_info_file in form_info_files:
 	mkdir_if_needed(output_dir_for_this_file)
 	output_file = os.path.join (
 		output_dir_for_this_file,
-		'metadata.yml'
+		'metadata.yaml'
 	)
 	with open(output_file,'w',encoding='utf-8') as fp:
 		fp.write(processed)
