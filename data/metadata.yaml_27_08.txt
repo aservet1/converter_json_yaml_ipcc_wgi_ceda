@@ -88,7 +88,7 @@
   },
   "computation": {
     "catalogue_url": "",
-    "title": "Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+    "title": "Caption for Figure ^((title|extract_figure_number))> from Chapter ^((field_ds_chapter|extract_chapter_number))> of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
     "description": "^((field_ds_chapter$title|extract_fig_info_from_chapter_description))>"
   }
 }
