@@ -96,7 +96,7 @@
     "description": ""
   },
   "computation": {
-    "catalogue_url": "", Chapter [INSERT CHAPTER NUMBER] of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
+    "catalogue_url": "Caption for Figure [INSERT FIGURE NUMBER] from Chapter [INSERT CHAPTER NUMBER] of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report (AR6)",
     "description": "[INSERT CAPTION]"
   }
 }
