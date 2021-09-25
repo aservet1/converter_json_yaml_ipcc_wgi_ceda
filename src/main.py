@@ -21,12 +21,9 @@ def mkdir_if_needed(dirname):
 
 try:
 	forms_dir = argv[1]
-	output_dir = argv[2]
 except IndexError:
-	print(colors.RED,"usage:",argv[0],"<folder con los archivos .json> <folder para escribir toda la metadata>",colors.RESET)
+	print(colors.RED,"usage:",argv[0],"<folder con los archivos .json>",colors.RESET)
 	exit(2)
-
-mkdir_if_needed(output_dir)
 
 data = {
 	"chapter_cit": text_file_as_list_of_lines('data/chapter_cit.txt'),
@@ -34,8 +31,7 @@ data = {
 	'input_data_table': text_file_as_list_of_lines('data/input_data_table.txt')
 }
 
-
-print(colors.GRN,"procesand files en folder '"+forms_dir+"'",colors.RESET)
+print(colors.GRN,"procesando files en folder '"+forms_dir+"'",colors.RESET)
 form_info_files = sorted([ fil for fil in os.listdir(forms_dir) if fil.endswith('.json') ])
 
 for form_info_file in form_info_files:
@@ -51,16 +47,8 @@ for form_info_file in form_info_files:
 	processed = process_text(template, data)
 	processed = yaml_validate(processed)
 
-	output_dir_for_this_file = os.path.join (
-		output_dir,
-		form_info_file.replace('.json','')
-	)
-	mkdir_if_needed(output_dir_for_this_file)
-	output_file = os.path.join (
-		output_dir_for_this_file,
-		'metadata.yaml'
-	)
-	with open(output_file,'w',encoding='utf-8') as fp:
+	output_file = form_info_file.replace('.json','.yaml')
+	with open(os.path.join(forms_dir,output_file),'w',encoding='utf-8') as fp:
 		fp.write(processed)
 
-print(colors.GRN,"resultados escrito a folder '"+output_dir+"'",colors.RESET)
+print(colors.GRN,"resultados escrito a folder '"+forms_dir+"'",colors.RESET)

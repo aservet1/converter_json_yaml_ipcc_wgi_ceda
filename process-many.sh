@@ -18,14 +18,14 @@
  B_WHT="\x1B[1;37m"
 # ---------------- #
 
-if [[ -z $1 ]] || [[ -z $2 ]] ; then
-	printf " ${RED}usage: $0 <folder con los archivos de JSON> <folder que va a tener los resultados de YAML>${RESET}\n"
+if [[ -z $1 ]] ; then
+	printf " ${RED}usage: $0 <folder con los archivos de JSON> {RESET}\n"
 	exit 2
 fi
 
 # - La forma que este script functiona es que junta todo los files .json en el
-# - primer folder y los pasa por mi programa, poniendo el resultado en el segundo
-# - folder. Si no existe el segundo folder, lo crea
+# - folder y los pasa por mi programa, poniendo el resultado en el mismo folder.
+# - Las nombres de los nuevos teneran el mismo nombre pero '.yaml' en ves de '.json'
 
 src=$1; dest=$2
 
